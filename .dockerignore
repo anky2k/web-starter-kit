@@ -1,0 +1,11 @@
+.idea
+.git
+node_modules
+.vscode
+build
+out
+dist
+coverage
+perf
+.next
+package-lock.json

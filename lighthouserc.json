@@ -1,0 +1,33 @@
+{
+  "ci": {   
+    "assert": {
+      "assertions": {
+        "categories:performance": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "first-contentful-paint": [
+          "error",
+          {
+            "maxNumericValue": 3000
+          }
+        ],
+        "interactive": [
+          "error",
+          {
+            "maxNumericValue": 5200
+          }
+        ],
+        "speed-index": [
+          "error",
+          {
+            "maxNumericValue": 4300
+          }
+        ]
+      }
+    },
+    "preset": "lighthouse:no-pwa"
+  }
+}

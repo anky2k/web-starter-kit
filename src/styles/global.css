@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+}
+.Video_sheet{
+  /* scroll-snap-type: y mandatory; */
+  height: 100vh;
+}
+.video_card{
+  /* scroll-snap-align: start; */
+}
+.profile-bg{
+  align-items: center;
+  background-image: url("https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/album-628a1f27c2ed684e4454d53f4c042f7a.svg");
+}
+
+
+.swiper-wrapper{
+  max-height: 100vh;
+}
+
+.glide__slide--active .sliderText {
+  display: block;
+}
+
+.rail-base{
+  @apply min-w-full;
+  @apply flex;
+  @apply scrollbar-hide;
+}
