@@ -1,6 +1,6 @@
-import Image from '../commons/image';
-import Tray from '../commons/tray';
-import Carousel from '../commons/carousel';
+import Image from '../src/components/commons/image';
+import Tray from '../src/components/commons/tray';
+import Carousel from '../src/components/commons/carousel';
 
 const Feed = () => { 
   return (
