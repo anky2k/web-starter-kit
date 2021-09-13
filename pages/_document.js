@@ -9,7 +9,7 @@ class WebStarterKit extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     // critical css file
-    const filePath = `./src/styles/critical.css`
+    const filePath = `./src/styles/global.css`
     styleSheetContent = readFileSync(filePath, 'utf8')
     
     return { ...initialProps };
