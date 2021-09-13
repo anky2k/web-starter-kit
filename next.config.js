@@ -34,8 +34,7 @@ const nextConfig = {
   // would suggest keeping this false
   trailingSlash: false, // https://github.com/zeit/next.js/issues/8119
   experimental: { // this takes the module/nomodule approach -  https://nextjs.org/blog/next-9-1#module--nomodule
-    modern: true,
-    optimizeCss: true
+    modern: true
   },
   i18n: {
     localeDetection: false,
