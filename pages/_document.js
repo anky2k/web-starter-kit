@@ -1,22 +1,41 @@
 import Document, {
-  Html, Main, NextScript, Head
+  Html, Main, NextScript, Head as NextHead
 } from 'next/document';
-import CustomHead from 'next-critical'
-import { readFileSync } from 'fs'
 
-let styleSheetContent = ''
+import bundleCss from '!raw-loader!../src/styles/tailwind-ssr.css';
+
+class Head extends NextHead {
+  getCssLinks(files) {
+    if (process.env.NODE_ENV !== 'production') {
+      return super.getCssLinks(files);
+    }
+
+    // do not return any css files in production
+    return [];
+  }
+}
 class WebStarterKit extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    // critical css file
-    const filePath = `./src/styles/critical.css`
-    styleSheetContent = readFileSync(filePath, 'utf8')
-    
-    return { ...initialProps };
+    const initialProps = await Document.getInitialProps(ctx);        
+    return { 
+      ...initialProps,
+      styles: [
+        ...initialProps.styles,
+        process.env.NODE_ENV === 'production' ? (
+          <style
+            key='custom'
+            dangerouslySetInnerHTML={{
+              __html: bundleCss,
+            }}
+          />
+        ) : (
+          <></>
+        ),
+      ]
+     };
   }
 
   render() {
-    const CriticalCssHead = CustomHead(Head, styleSheetContent)
     return (
       <Html lang="en">
         <Head />
