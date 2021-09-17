@@ -55,7 +55,7 @@ const nextConfig = {
   generateBuildId: async () => appVersion,
   webpack: config => {
     config.output.publicPath = '';
-    config.resolve.fallback = { ...config.resolve.fallback, ...{ fs: false } };
+    config.resolve.fallback = { ...config.resolve.fallback, ...{ fs: false } };    
     config.plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
       generateStatsFile: true,
