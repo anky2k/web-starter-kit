@@ -1,8 +1,6 @@
 
 import { getDateDiffSeconds } from '../utils/date';
-// import { loadMockServer } from '../mock';
-
-const loadMockServer = async () => Promise.resolve(true);
+import { loadMockServer } from '../mock';
 
 const RETRY_COUNT = 3;
 const RETRY_DELAY = 500;
