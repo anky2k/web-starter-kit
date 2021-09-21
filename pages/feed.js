@@ -2,6 +2,8 @@ import Image from '../src/components/commons/image';
 import Tray from '../src/components/commons/tray';
 import Carousel from '../src/components/commons/carousel';
 
+// pass image dimensions for basis breakpoint
+
 const Feed = () => { 
   return (
     <>
@@ -9,16 +11,20 @@ const Feed = () => {
         <div>
           <Carousel>
               {
-                new Array(6).fill(1).map((item, index) => (
-                  <div key={index}>
+                [
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(20).jpg',
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(21).jpg',
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg',
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg',
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(24).jpg',
+                  'https://mdbootstrap.com/img/Photos/Slides/img%20(25).jpg'
+                ].map( (item, index) => (
+                  <div key={index} className="w-full h-96 relative">
                     <Image
-                      alt={'some image'}  
-                      height={300}
-                      width={400}
-                      // eslint-disable-next-line max-len
-                      src="/image/upload/w_599,h_337,c_scale,f_webp,q_auto:eco/resources/0-101-externalli_666746733/app_cover/1170x658withlogo_45191934.jpg"
-                    />
-                    <div style={{ margin: '5px' }} />
+                      layout="fill"
+                      alt={'some image'}                    
+                      src={item}
+                    />              
                   </div>
                 ))
               }
@@ -31,10 +37,8 @@ const Feed = () => {
                     alt={'some image'}  
                     height={300}
                     width={400}
-                    // eslint-disable-next-line max-len
-                    src="/image/upload/w_599,h_337,c_scale,f_webp,q_auto:eco/resources/0-101-externalli_666746733/app_cover/1170x658withlogo_45191934.jpg"
-                  />
-                  <div style={{ margin: '5px' }} />
+                    src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+                  />                  
                 </div>
               ))
             }

@@ -23,7 +23,7 @@ class WebStarterKit extends Document {
         ...initialProps.styles,
         process.env.NODE_ENV === 'production' ? (
           <style
-            key='custom'
+            key='inline-styles'
             dangerouslySetInnerHTML={{
               __html: bundleCss,
             }}

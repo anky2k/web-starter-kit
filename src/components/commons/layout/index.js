@@ -2,22 +2,22 @@ import Router from '../../../../router';
 
 const Layout = ({ children }) => {
   return(
-    <div>
+    <div className="h-screen w-screen fixed">
       <div className="flex justify-end">
         <div className="flex justify-evenly">
-          <div
+          <span
             role="presentation"
             onClick={() => Router.pushState('repos')}
           >
             Git Hub
-          </div>
+          </span>
           <span className="px-2">|</span>
-          <div
+          <span
             role="presentation"
             onClick={() => Router.pushState('feed')}
           >
             Feed
-          </div>
+          </span>
         </div>
       </div>
       {children}
