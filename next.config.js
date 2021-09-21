@@ -55,7 +55,15 @@ const nextConfig = {
   generateBuildId: async () => appVersion,
   webpack: config => {
     config.output.publicPath = '';
-    config.resolve.fallback = { ...config.resolve.fallback, ...{ fs: false } };    
+    config.resolve.fallback = { ...config.resolve.fallback, ...{ fs: false } };
+    !dev && config.module.rules.push({
+      test: /\.js$/,
+      loader: 'string-replace-loader',
+      options: {
+        search: `import { loadMockServer } from '../mock';`,
+        replace: `const loadMockServer = async () => Promise.resolve(true);`,
+      }
+    })
     config.plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
       generateStatsFile: true,
