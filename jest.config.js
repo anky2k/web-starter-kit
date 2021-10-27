@@ -29,7 +29,7 @@ module.exports = {
   coverageReporters: ['json', 'html', 'cobertura', 'json-summary'],
 
   // An array of file extensions your modules use
-  moduleFileExtensions: ['js', 'json', 'jsx'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'mjs'],
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: ['<rootDir>/enzyme.config.js'],
@@ -38,10 +38,11 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
+  testMatch: ['**/__tests__/**/*.js?(x)','**/__tests__/**/*.mjs?(x)', '**/?(*.)+(spec|test).js?(x)'],
 
   transform: {
-    '^.+\\.[jt]sx?$': 'babel-jest',
+    '^.+\\.[j]sx?$': ['babel-jest', { presets: ['next/babel'] }],
+    "^.+\\.mjs$": ['babel-jest', { presets: ['next/babel'] }],
     '^.+\\.svg$': 'jest-svg-transformer'
   },
 

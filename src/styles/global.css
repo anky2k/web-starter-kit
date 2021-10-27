@@ -21,9 +21,6 @@
   max-height: 100vh;
 }
 
-.glide__slide--active .sliderText {
-  display: block;
-}
 
 .rail-base{
   @apply min-w-full;
