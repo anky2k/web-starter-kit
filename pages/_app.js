@@ -1,8 +1,6 @@
-// import App from "next/app"
 import '../src/styles/global.css';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-// import { Workbox, messageSW } from 'workbox-window';
 import Layout from '../src/components/commons/layout';
 import { TranslationProvider } from '../src/hooks/use-translation';
 import { RouteStateProvider } from '../src/hooks/use-route-state';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import SearchResults from 'components/search-results';
-import { srGetTopRepos } from 'sources/repos';
+import SearchResults from '../search-results';
+import { srGetTopRepos } from '../../sources/repos';
 import ComponentStateHandler, {
   useFetcher
 } from '../commons/component-state-handler';

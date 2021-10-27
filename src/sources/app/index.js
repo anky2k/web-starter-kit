@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import canUseDom from 'can-use-dom';
-import { get } from 'network';
-import { apiMiddleWare } from 'network/utils';
+import { get } from '../../network';
+import { apiMiddleWare } from '../../network/utils';
 import { getApiBasePath } from '../../config';
 
 const middlewareSettings = {
