@@ -23,7 +23,8 @@
 
 
 .rail-base{
-  @apply min-w-full;
-  @apply flex;
-  @apply scrollbar-hide;
+  @apply w-full;
+  @apply inline-flex;
+  @apply overflow-x-auto;
+  @apply scrollbar-hide;  
 }
