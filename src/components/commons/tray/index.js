@@ -11,14 +11,14 @@ const TrayContent = ({
   });
 
   return (
-    <div
+    <a
       data-contentindex={(childIndex + 1)}
       ref={ref}
       data-testid="dt-tray-content"
-      className="h-full m-1 flex-shrink-0 w-1/3 lg:w-1/6 md:w-1/4"
+      className="card h-full m-1 flex-shrink-0 block w-1/3 lg:w-1/6 md:w-1/4 hover:bg-blend-darken focus:bg-blend-darken"
     >
       {child}
-    </div>
+    </a>
   );
 };
 
@@ -50,7 +50,7 @@ const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) =
   return (
     <>
       <div
-        className="rail-base"
+        className="rail"
         ref={ref || rootRef}
         data-testid="dt-tray-container"
       >

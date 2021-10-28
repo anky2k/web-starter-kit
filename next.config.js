@@ -25,9 +25,9 @@ const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: createSecureHeaders() }];
   },
-  // images: {
-  //   domains: ['cdn.com']
-  // },
+  images: {
+    domains: ['picsum.photos']
+  },
   eslint: {
     dirs: ['pages', 'src'], // Only run ESLint on the 'pages' and 'src' directories during production builds (next build)
   },

@@ -22,9 +22,31 @@
 }
 
 
-.rail-base{
+.rail{
   @apply w-full;
   @apply inline-flex;
   @apply overflow-x-auto;
-  @apply scrollbar-hide;  
+  @apply scrollbar-hide;    
+}
+
+.card{
+  position: relative;
+  display: block;
+  transition: transform 400ms;
+}
+
+.rail:focus-within .card,
+.rail:hover .card {
+  transform: translateX(-25%);
+}
+
+.card:focus ~ .card,
+.card:hover ~ .card {
+  transform: translateX(25%);
+}
+
+.rail .card:focus,
+.rail .card:hover {
+  transform: scale(1.5);
+  z-index: 1;
 }

@@ -1400,13 +1400,13 @@ video {
   max-height: 100vh;
 }
 
-.rail-base{
+.rail{
   min-width: 100%;
   display: flex;
   scrollbar-width: none;
 }
 
-.rail-base::-webkit-scrollbar {
+.rail::-webkit-scrollbar {
   display: none;
 }
 
