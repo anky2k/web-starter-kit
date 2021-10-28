@@ -15,7 +15,7 @@ const TrayContent = ({
       data-contentindex={(childIndex + 1)}
       ref={ref}
       data-testid="dt-tray-content"
-      className="card h-full m-1 flex-shrink-0 block w-1/3 lg:w-1/6 md:w-1/4 hover:bg-blend-darken focus:bg-blend-darken"
+      className="card h-full m-1 flex-shrink-0 block w-1/3 lg:w-1/6 md:w-1/4"
     >
       {child}
     </a>
