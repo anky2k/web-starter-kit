@@ -76,7 +76,7 @@ export function reportWebVitals(metric) {
 //   }
 // }
 
-function WebStarterKit({
+function VSAPortal({
   Component, pageProps, locales, locale
 }) {
   // useEffect(() => {
@@ -164,7 +164,7 @@ function WebStarterKit({
 // perform automatic static optimization, causing every page in your app to
 // be server-side rendered.
 //
-WebStarterKit.getInitialProps = async ctx => {
+VSAPortal.getInitialProps = async ctx => {
   const { router } = ctx;
   const { locale = 'en-in' } = router;
   try {
@@ -180,4 +180,4 @@ WebStarterKit.getInitialProps = async ctx => {
 };
 
 
-export default WebStarterKit;
+export default VSAPortal;
