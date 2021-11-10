@@ -16,15 +16,15 @@ import { NextSeo, VideoJsonLd } from 'next-seo';
 // }]}
 
 const defaultMeta = {
-  title: 'localhost App: Free Short Video Making App for fun videos, memes & more',
+  title: 'Download Games',
   // eslint-disable-next-line max-len
-  description: 'Dialogue Dubbing App: Download localhost App for short music videos, create funny videos, dialogue dubbing video, dance videos & more and share on social media',
+  description: 'Buy games and enjoy uninterrupted fun playing them',
   canonical: 'http://localhost:3000/',
   openGraph: {
     url: 'http://localhost:3000/',
-    title: 'localhost App: Free Short Video Making App for fun videos, memes & more',
+    title: 'Download Games',
     // eslint-disable-next-line max-len
-    description: 'Dialogue Dubbing App: Download localhost App for short music videos, create funny videos, dialogue dubbing video, dance videos & more and share on social media',
+    description: 'Buy games and enjoy uninterrupted fun playing them',
     images: [
       {
         url: 'https://prismic-io.s3.amazonaws.com/gary-blog%2F3297f290-a885-4cc6-9b19-3235e3026646_default.jpg',
