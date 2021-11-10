@@ -1,6 +1,6 @@
 {
-  "short_name": "webStarter",
-  "name": "webStarter",
+  "short_name": "VSAPortal",
+  "name": "VSAPortal",
   "lang": "en",
   "description": "Bootstrapping kit for webapps",
   "start_url": "http://localhost:3000/",

@@ -14,7 +14,7 @@ class Head extends NextHead {
     return [];
   }
 }
-class WebStarterKit extends Document {
+class VSAPortal extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);        
     return { 
@@ -48,4 +48,4 @@ class WebStarterKit extends Document {
   }
 }
 
-export default WebStarterKit;
+export default VSAPortal;
