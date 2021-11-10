@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import PageIndicators from './page-indicators';
+// import PageIndicators from './page-indicators';
 import useIntersect from '../../../hooks/use-intersect';
 
 const TrayContent = ({
@@ -22,12 +22,12 @@ const TrayContent = ({
   );
 };
 
-const trayContentEnteringViewPort = entry => {
-  if (entry && (entry.intersectionRatio > 0)) {
-    return entry.target.attributes['data-contentindex'].value;
-  }
-  return '';
-};
+// const trayContentEnteringViewPort = entry => {
+//   if (entry && (entry.intersectionRatio > 0)) {
+//     return entry.target.attributes['data-contentindex'].value;
+//   }
+//   return '';
+// };
 
 const TrayPageSize = {
   sm: 4,
@@ -35,17 +35,17 @@ const TrayPageSize = {
   lg: 4,
   peek: 3
 };
-const canRenderIndicators = (children, showIndicators, type) => (children.length && children.length > TrayPageSize[type] && showIndicators);
+// const canRenderIndicators = (children, showIndicators, type) => (children.length && children.length > TrayPageSize[type] && showIndicators);
 
-const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) => {
+const Tray = React.forwardRef(({ children, type = 'md' }, ref) => {
   const [element, setElement] = useState({});
   const rootRef = useRef();
 
-  const onTrayContentScroll = entry => {
-    if (trayContentEnteringViewPort(entry)) {
-      setElement(entry);
-    }
-  };
+  // const onTrayContentScroll = entry => {
+  //   if (trayContentEnteringViewPort(entry)) {
+  //     setElement(entry);
+  //   }
+  // };
 
   return (
     <>
@@ -56,7 +56,7 @@ const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) =
       >
         {children.length && children.map((child, index) => (
           <TrayContent
-            onScroll={onTrayContentScroll}
+            onScroll={() => console.log('in view')}
             key={index}
             rootRef={rootRef}
             child={child}
@@ -67,7 +67,7 @@ const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) =
         {!children.length // single element
           && (
             <TrayContent
-              onScroll={onTrayContentScroll}
+              onScroll={() => console.log('in view')}
               rootRef={rootRef}
               child={children}
               type={type}
@@ -75,7 +75,7 @@ const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) =
             />
           )}
       </div>
-      {
+      {/* {
         canRenderIndicators(children, showIndicators, type) && (
           <PageIndicators
             type={type}
@@ -85,7 +85,7 @@ const Tray = React.forwardRef(({ children, type = 'md', showIndicators }, ref) =
             {children}
           </PageIndicators>
         )
-      }
+      } */}
     </>
   );
 });

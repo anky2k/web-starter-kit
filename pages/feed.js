@@ -13,14 +13,32 @@ const Feed = () => {
           >
             {
               new Array(30).fill(1).map((item, index) => (
-                <div key={index}>
-                  <Image
-                    alt={'some image'}  
-                    height={600}
-                    width={800}
-                    src="/800/600"
-                  />
-                </div>
+                <Image
+                  key={index}
+                  alt={'some image'}  
+                  height={600}
+                  width={800}
+                  src='/800/600'
+                />
+              ))
+            }
+          </Tray>
+        </div>
+      }     
+     {
+        <div>         
+          <Tray
+            type={type}
+          >
+            {
+              new Array(30).fill(1).map((item, index) => (
+                <Image
+                  key={index}
+                  alt={'some image'}  
+                  height={624}
+                  width={864}
+                  src='/942/452'
+                />
               ))
             }
           </Tray>
