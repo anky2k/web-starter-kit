@@ -36,11 +36,11 @@ const nextConfig = {
   experimental: { // this takes the module/nomodule approach -  https://nextjs.org/blog/next-9-1#module--nomodule
     modern: true
   },
-  // i18n: {
-  //   localeDetection: false,
-  //   locales: ['en-in', 'hi-in', 'bn-in'],
-  //   defaultLocale: 'en-in'
-  // },
+  i18n: {
+    localeDetection: false,
+    locales: ['en-in', 'hi-in', 'bn-in'],
+    defaultLocale: 'en-in'
+  },
   pwa: {
     swSrc: './src/service-worker.js',
     dest: 'public'

@@ -7,12 +7,20 @@ const Home = props => {
     <div className="flex h-screen">
       <SeoMeta
         data={{
-          title: 'some game portal'
+          title: props.title
         }}
       />
       <span className="font-bold m-auto text-purple-800 text-4xl">{t('welcome')}</span>
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      title: 'test title'
+    }
+  };
+}
 
 export default Home;
