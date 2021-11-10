@@ -7,12 +7,12 @@ import { RouteStateProvider } from '../src/hooks/use-route-state';
 import { getLocales } from '../src/sources/app';
 import HeadMeta from '../src/components/commons/head-meta';
 
-// if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
-//   const ReactDOM = require('react-dom');
-//   const React = require('react');
-//   const axe = require('@axe-core/react');
-//   axe(React, ReactDOM, 1000);
-// }
+if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
+  const ReactDOM = require('react-dom');
+  const React = require('react');
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
 
 // TODO add withBasePath for everything that gets affected because of base-path i18n
 
