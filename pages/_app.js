@@ -166,7 +166,7 @@ function WebStarterKit({
 //
 WebStarterKit.getInitialProps = async ctx => {
   const { router } = ctx;
-  const { locale } = router;
+  const { locale = 'en-in' } = router;
   try {
     const locales = await getLocales(locale);
     return {

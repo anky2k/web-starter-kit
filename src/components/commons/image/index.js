@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 const Img = React.memo(({
-  src, alt = 'localhost', title, height, width, onClick, loading = 'lazy',className
+  src, alt = 'localhost', title, height, width, onClick, className
 }) => {
   const aspectRatio = (height / width) * 100;
+
+  const loader = () => `https://via.placeholder.com/${width}`
+
   return (
     <>
       <Image
@@ -11,7 +14,7 @@ const Img = React.memo(({
         height={height}
         width={width}
         style={{ paddingBottom: `${aspectRatio}%` }}
-        loading={loading}
+        loader={loader}
         src={src}
         alt={alt}
         title={title}
@@ -24,5 +27,6 @@ const Img = React.memo(({
     </>
   );
 });
+
 Img.displayName = 'ImageComponent'
 export default Img;
