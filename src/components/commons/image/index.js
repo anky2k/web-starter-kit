@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 const Img = React.memo(({
   src, alt = 'localhost', title, height, width, onClick, className
 }) => {

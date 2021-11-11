@@ -1,9 +1,12 @@
-import Router from '../../../../router';
+import Nav from '../navbar'
 
 const Layout = ({ children }) => {
   return(
-    <div>      
-      {children}
+    <div>               
+      <Nav />
+      <div className="top-4 relative overflow-auto">
+        {children}
+      </div>
     </div>
   );
 }

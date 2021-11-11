@@ -10,7 +10,16 @@ const Home = props => {
           title: 'some game portal'
         }}
       />
-      <span className="font-bold m-auto text-purple-800 text-4xl">{t('welcome')}</span>
+      <div>
+        <div className="tabs tabs-boxed">
+          <a className="tab tab-active">All Games</a> 
+          <a className="tab">HTML5 Games</a> 
+          <a className="tab">Board Games</a>
+          <a className="tab">Other</a>
+        </div>
+
+        <div>Gallery</div>
+      </div>
     </div>
   );
 };
