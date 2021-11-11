@@ -31,7 +31,7 @@ function Gallery() {
           state={fetchState}
           Loader={Loader}
         >
-           <ResponsiveMasonry
+           {/* <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
             >
                 <Masonry>
@@ -39,7 +39,12 @@ function Gallery() {
                     games.map((data, index) => <div key={index} className="p-2"><Card data={data} /></div>)    
                 }
                 </Masonry>
-            </ResponsiveMasonry>
+            </ResponsiveMasonry> */}
+            <div className="grid grid-cols-2 sm:grid-cols-3">
+                {   
+                    games.map((data, index) => <div key={index} className="p-2"><Card data={data} /></div>)    
+                }
+            </div>
         </ComponentStateHandler>
       );
 }

@@ -1,5 +1,5 @@
 
-// import Image from 'next/image'
+import Image from 'next/image'
 import useDrawer from '../../hooks/use-drawer';
 
 function Prompt () {
@@ -12,24 +12,20 @@ function Card({ data }) {
     const { src, name, desc }  = data;
     const { show } = useDrawer();
     return (
-        <div className="card shadow-lg text-accent-content">
-            {/* <Image 
+        <div role="button" onClick={() => show('Title', Prompt)} className="card shadow-lg text-accent-content">
+            <Image 
                 alt={name}                     
                 src={src} 
-                width={2400}
-                height={1598}
+                width={18}
+                height={28}
                 layout="responsive"
-            /> */}
-            <img 
+            />
+            {/* <img 
                 alt={name}                     
                 src={src}>
-            </img>
-            <div className="card-body bg-gray-100">
-                <h2 className="card-title text-gray-800">{name}</h2> 
-                <p>{desc}</p> 
-                <div className="card-actions">
-                    <button onClick={() => show('Download', Prompt)}className="btn btn-secondary">Play Now</button>
-                </div>
+            </img> */}
+            <div className="card-body bg-white">
+                <h2 className="card-title text-gray-800">{name}</h2>                 
             </div>
         </div> 
     )
