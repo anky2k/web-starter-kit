@@ -42,7 +42,7 @@ it('should be able fetch and use translations as defined in the locales file', a
     </TranslationProvider>
   );
 
-  expect(getByTestId('dt-label').innerHTML).toBe('Welcome to web starter kit');
+  expect(getByTestId('dt-label').innerHTML).toBe('Welcome to some game portal');
 });
 
 it('should be able to change the language', async () => {

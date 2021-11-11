@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "src": "/images/bid-16-main.jpg",
+            "name": "bid 16",
+            "desc": "",
+            "type": "other",
+            "tags": []
+        },
+        {
+            "src": "/images/business-main-img.jpg",
+            "name": "bussiness",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/business-main-india.jpg",
+            "name": "bussiness india",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/business-india.jpg",
+            "name": "bussiness game",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/dominos-main-img.jpg",
+            "name": "dominos",
+            "desc": "",
+            "type": "other",
+            "tags": []
+        },
+        {
+            "src": "/images/hindi-word-connect.png",
+            "name": "hindi word connect",
+            "desc": "",
+            "type": "other",
+            "tags": []
+        },
+        {
+            "src": "/images/ludo-main-img.jpg",
+            "name": "ludo",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/nine-man-mories-main.jpg",
+            "name": "nine man mories",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/parchici-ludo-main.jpg",
+            "name": "parchici ludo",
+            "desc": "",
+            "type": "board",
+            "tags": []
+        },
+        {
+            "src": "/images/word-connect-img.jpg",
+            "name": "word connect",
+            "desc": "",
+            "type": "other",
+            "tags": []
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 import useTranslation from '../src/hooks/use-translation';
 import { SeoMeta } from '../src/components/commons/head-meta/seo-meta';
+import Gallery from '../src/components/game-gallery';
 
 const Home = props => {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ const Home = props => {
           title: 'some game portal'
         }}
       />
-      <div>
+      <div className="w-full">
         <div className="tabs tabs-boxed">
           <a className="tab tab-active">All Games</a> 
           <a className="tab">HTML5 Games</a> 
@@ -18,7 +19,7 @@ const Home = props => {
           <a className="tab">Other</a>
         </div>
 
-        <div>Gallery</div>
+        <Gallery />
       </div>
     </div>
   );

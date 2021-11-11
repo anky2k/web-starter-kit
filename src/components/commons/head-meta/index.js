@@ -4,7 +4,7 @@ import { withBasePath } from '../../../config';
 import { SeoMeta } from './seo-meta';
 
 function HeadMeta() {
-  const APP_NAME = 'Web Starter Kit';
+  const APP_NAME = 'some game portal';
   // eslint-disable-next-line no-unused-vars
   const { t } = useTranslation();
   return (

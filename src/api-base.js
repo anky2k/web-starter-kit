@@ -2,20 +2,16 @@
 
 export const apiBaseEndPoints = {
   local: {
-    test: 'https://api.github.com',
     app: 'http://localhost:3000'
   },
   development: {
-    test: 'https://api.github.com',
     app: 'http://localhost:3000'
   },
   staging: {
-    test: 'https://api.github.com',
-    app: 'http://localhost:3000'    
+    app: 'https://d1lf3l2ndx18vw.cloudfront.net'    
   },
   production: {
-    test: 'https://api.github.com',
-    app: 'http://localhost:3000'    
+    app: 'https://d1lf3l2ndx18vw.cloudfront.net'    
   }
 };
 
