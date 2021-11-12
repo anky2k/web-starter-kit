@@ -6,7 +6,7 @@ const Drawer = ({
 }) => (
   <div
     data-testid="drawer-container"
-    className={`${visible ? 'h-3/4' : 'h-0'} 
+    className={`${visible ? 'h-1/3' : 'h-0'} 
       baseContainer z-10 fixed bottom-0 w-full overflow-hidden rounded-t-2xl bg-white
       transition-all duration-300
       motion-reduce:transition-none motion-reduce:transform-none
