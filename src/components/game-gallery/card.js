@@ -8,26 +8,46 @@ function Prompt () {
     )
 }
 
+const myLoader = ({ src }) => {
+    return `https://picsum.photos/seed/${src}`
+  }
+  
+
 function Card({ data }) {
     const { src, name, desc }  = data;
     const { show } = useDrawer();
     return (
-        <div role="button" onClick={() => show('Title', Prompt)} className="card shadow-lg text-accent-content">
-            <Image 
-                alt={name}                     
-                src={src} 
-                width={18}
-                height={28}
-                layout="responsive"
-            />
-            {/* <img 
-                alt={name}                     
-                src={src}>
-            </img> */}
-            <div className="card-body bg-white">
-                <h2 className="card-title text-gray-800">{name}</h2>                 
+        <div>
+            <div role="button" onClick={() => show('Title', Prompt)} className="card row-span-3 shadow-lg compact bg-base-100">             
+                <div className="w-32 h-48">
+                <Image
+                    loader={myLoader}
+                    className={`
+                        position-relative overflow-hidden
+                        animate-appear bg-purple-100
+                    `}
+                    src={`${new Date().getTime()}/300/150`} 
+                    alt={name}
+                    layout="fill"
+                    object-fit="cover"
+                    role="presentation"
+                    placeholder="blur"                
+                    blurDataURL={`data:image/jpeg;base64,
+                    /9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj
+                    /2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj
+                    /wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf
+                    /EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf
+                    /aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==`}
+                    />            
+                </div>            
+            </div> 
+            <div className="card-body" onClick={() => show('Title', Prompt)} role="presentation">
+                <div>
+                    <h2 className="card-title text-gray-700">{name}</h2>                 
+                    <p className="text-base-content text-opacity-40">{desc}</p>
+                </div>
             </div>
-        </div> 
+        </div>
     )
 }
 

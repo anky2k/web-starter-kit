@@ -28,7 +28,8 @@ const nextConfig = {
     dirs: ['pages', 'src'], // Only run ESLint on the 'pages' and 'src' directories during production builds (next build)
   },
   images: {    
-    formats: ['image/avif', 'image/webp'],
+    domains: ['picsum.photos'],
+    loader: 'custom'
   },
   // would suggest keeping this false
   trailingSlash: false, // https://github.com/zeit/next.js/issues/8119
