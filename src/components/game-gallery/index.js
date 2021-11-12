@@ -1,4 +1,3 @@
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import { useState } from 'react'
 import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
 import Card from './card';
