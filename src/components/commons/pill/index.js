@@ -1,13 +1,14 @@
-function Pill ({ text, onClick }) {
+function Pill ({ text, onClick, index }) {
     return (
         <button
             onClick={onClick}
-            className="
-            text-purple-500
+            className={`
+            'text-purple-500'
             bg-transparent
             border border-solid border-purple-500
-            hover:bg-purple-500 hover:text-white
-            active:bg-purple-600
+            hover:bg-purple-500 hover:text-white            
+            active:bg-purple-600 active:text-white    
+            focus:bg-purple-600 focus:text-white            
             font-bold
             uppercase
             text-sm
@@ -21,7 +22,7 @@ function Pill ({ text, onClick }) {
             mb-1
             ease-linear
             transition-all
-            duration-150"
+            duration-150`}
             type="button"
       >
         {text}

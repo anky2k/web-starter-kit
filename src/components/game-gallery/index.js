@@ -54,7 +54,15 @@ function Gallery() {
                     {
                         GameTypes.map(( type, index) => 
                         <Pill 
-                            onClick={(e) => setGames(filterByType(e.target.innerText, getPreservedList()))}
+                            onClick={(e) => {
+                                // const els = document.getElementsByClassName('dt-pill')
+                                // Array.from(els).forEach(elem => {
+                                //     elem.className = elem.className.split(' ').filter( item => ['bg-purple-600', 'text-white'].indexOf(item) >= 0 ).join(' ')
+                                // })
+                                // e.target.className = e.target.className.split(' ').filter(item => item === 'text-purple-500').push('bg-purple-600 text-white').join(' ')
+                                setGames(filterByType(e.target.innerText, getPreservedList()))
+                            }}
+                            index={index}
                             key={index} 
                             text={type}
                         />
