@@ -43,7 +43,7 @@ function Card({ data }) {
             </div> 
             <div className="card-body" onClick={() => show('Title', Prompt)} role="presentation">
                 <div>
-                    <h2 className="card-title text-gray-700">{name}</h2>                 
+                    <h2 className="card-title text-gray-600">{name}</h2>                 
                     <p className="text-base-content text-opacity-40">{desc}</p>
                 </div>
             </div>

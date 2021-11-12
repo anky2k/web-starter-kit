@@ -4,6 +4,8 @@ import Gallery from '../src/components/game-gallery';
 
 const Home = props => {
   const { t } = useTranslation();
+
+
   return (
     <div className="flex h-screen">
       <SeoMeta
@@ -11,14 +13,7 @@ const Home = props => {
           title: 'some game portal'
         }}
       />
-      <div className="w-full">
-        <div className="tabs tabs-boxed">
-          <a className="tab tab-active">All Games</a> 
-          <a className="tab">HTML5 Games</a> 
-          <a className="tab">Board Games</a>
-          <a className="tab">Other</a>
-        </div>
-
+      <div className="w-full overflow-x-hidden">        
         <Gallery />
       </div>
     </div>
