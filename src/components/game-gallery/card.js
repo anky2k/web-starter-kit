@@ -23,7 +23,7 @@ function Card({ data }) {
                         animate-appear bg-purple-100
                     `}
                     // src={src} 
-                    src={`${new Date().getTime()}/200`} 
+                    src={`${new Date().getTime()}/150`} 
                     alt={name}
                     layout="fill"
                     object-fit="cover"
