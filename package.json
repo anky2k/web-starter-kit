@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/runtime-corejs2": "^7.8.7",
     "@date-io/date-fns": "^1.3.6",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",

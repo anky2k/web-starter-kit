@@ -69,6 +69,41 @@
             "desc": "",
             "type": "other",
             "tags": []
+        },
+        {
+            "src": "/images/bellard.jpg",
+            "name": "bellard",
+            "desc": "",
+            "type": "html5",
+            "tags": []
+        },
+        {
+            "src": "/images/downhill.jpg",
+            "name": "downhill",
+            "desc": "",
+            "type": "html5",
+            "tags": []
+        },
+        {
+            "src": "/images/fishingfrenzy.jpg",
+            "name": "fishing frenzy",
+            "desc": "",
+            "type": "html5",
+            "tags": []
+        },
+        {
+            "src": "/images/fruitslasher.jpg",
+            "name": "fruit slasher",
+            "desc": "",
+            "type": "html5",
+            "tags": []
+        },
+        {
+            "src": "/images/Watercraft_Rush.jpg",
+            "name": "watercraft rush",
+            "desc": "",
+            "type": "html5",
+            "tags": []
         }
     ]
 }
