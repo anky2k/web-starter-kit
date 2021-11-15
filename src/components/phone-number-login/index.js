@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 
 
-const EnterNumber = ({ onClose, onSubmit, playstoreLink }) => (
+const EnterNumber = ({ onClose, onSubmit }) => (
     <div className="form-control w-full items-center mt-8">            
         <input type="tel" placeholder="Enter your mobile number" className="input input-bordered w-3/4" />
         <div className="mt-6 grid grid-cols-2 w-3/4">
@@ -12,7 +12,7 @@ const EnterNumber = ({ onClose, onSubmit, playstoreLink }) => (
     </div>
 )
 
-const EnterOtp = ({ onSubmit, onClose }) => (
+const EnterOtp = ({ onSubmit, onClose, playstoreLink  }) => (
     <div className="form-control w-full items-center mt-8">            
         <input type="tel" placeholder="Enter OTP" className="input input-bordered w-3/4" />    
 
@@ -33,12 +33,12 @@ const EnterOtp = ({ onSubmit, onClose }) => (
     </div>
 )
 
-const PhoneLoginFlow = ({ onClose }) => {
+const PhoneLoginFlow = ({ onClose, playstoreLink }) => {
     const [flow, setFlow] = useState('number')
     const [error, setError] = useState('')
 
     if(flow === 'number') return (<EnterNumber onClose={onClose} onSubmit={transitionTo => setFlow(transitionTo)}/>)
-    if(flow === 'otp') return (<EnterOtp onClose={onClose} onSubmit={transitionTo => setFlow(transitionTo)} />)    
+    if(flow === 'otp') return (<EnterOtp onClose={onClose} playstoreLink={playstoreLink} onSubmit={transitionTo => setFlow(transitionTo)} />)    
 }
 
 export default PhoneLoginFlow;
