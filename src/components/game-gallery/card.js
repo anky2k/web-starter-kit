@@ -4,7 +4,7 @@ import useDrawer from '../../hooks/use-drawer';
 import PhoneLoginFlow from '../phone-number-login'
 
 const myLoader = ({ src }) => {
-    return `http://d1lf3l2ndx18vw.cloudfront.net${src}`
+    return `https://d1lf3l2ndx18vw.cloudfront.net${src}`
     // return `https://picsum.photos/seed/${src}`
   }
   
