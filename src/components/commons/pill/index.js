@@ -12,7 +12,7 @@ function Pill ({ text, onClick, index }) {
             font-bold
             uppercase
             text-sm
-            px-4
+            px-3
             py-2
             rounded
             outline-none
