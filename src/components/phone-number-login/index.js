@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 
 
-const EnterNumber = ({ onClose, onSubmit }) => (
+const EnterNumber = ({ onClose, onSubmit, playstoreLink }) => (
     <div className="form-control w-full items-center mt-8">            
         <input type="tel" placeholder="Enter your mobile number" className="input input-bordered w-3/4" />
         <div className="mt-6 grid grid-cols-2 w-3/4">
@@ -22,7 +22,7 @@ const EnterOtp = ({ onSubmit, onClose }) => (
                 className="btn btn-primary"
                 onClick={
                     () => {
-                        window.open('http://www.google.com');
+                        window.open(playstoreLink);
                         onClose();
                     }                       
                 }

@@ -10,11 +10,11 @@ const myLoader = ({ src }) => {
   
 
 function Card({ data }) {
-    const { src, name, desc }  = data;
+    const { src, name, desc, playstoreLink }  = data;
     const { show, close } = useDrawer();
     return (
         <div>
-            <div role="button" onClick={() => show('', () => (<PhoneLoginFlow onClose={close}/>))} className="card row-span-3 shadow-lg compact bg-base-100">             
+            <div role="button" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} className="card row-span-3 shadow-lg compact bg-base-100">             
                 <div className="w-32 h-48">
                 <Image
                     loader={myLoader}
@@ -38,7 +38,7 @@ function Card({ data }) {
                     />            
                 </div>            
             </div> 
-            <div className="card-body" onClick={() => show('', () => (<PhoneLoginFlow onClose={close}/>))} role="presentation">
+            <div className="card-body" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
                 <div>
                     <h2 className="card-title text-gray-600">{name}</h2>                 
                     <p className="text-base-content text-opacity-40">{desc}</p>

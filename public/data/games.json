@@ -5,105 +5,120 @@
             "name": "bid 16",
             "desc": "",
             "type": "other",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.baghbakri.free.shologuti.bead16.damru"
         },
         {
             "src": "/images/business-main-img.jpg",
             "name": "bussiness",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         },
         {
             "src": "/images/business-main-india.jpg",
             "name": "bussiness india",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.monopoli.crazypoly.business.game.india"
         },
         {
             "src": "/images/business-main-india.jpg",
             "name": "bussiness game",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         },
         {
             "src": "/images/dominos-main-img.jpg",
             "name": "dominos",
             "desc": "",
             "type": "other",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.jbb.tile.dominoes.free.online.game"
         },
         {
             "src": "/images/hindi-word-connect.png",
             "name": "hindi word connect",
             "desc": "",
             "type": "other",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.wordconnect.wordsearch.hindiwordsearch"
         },
         {
             "src": "/images/ludo-main-img.jpg",
             "name": "ludo",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
         },
         {
             "src": "/images/nine-man-mories-main.jpg",
             "name": "nine man mories",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.charbhar.alignit.mills.ninemenmorris"
         },
         {
             "src": "/images/parchici-ludo-main.jpg",
-            "name": "parchici ludo",
+            "name": "pachisi ludo",
             "desc": "",
             "type": "board",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.parcheesi.board.game.parchis.king.pachisi.star"
         },
         {
             "src": "/images/word-connect-img.jpg",
             "name": "word connect",
             "desc": "",
             "type": "other",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.crossword.word.game.search.puzzle.connect"
         },
         {
             "src": "/images/bellard.jpg",
             "name": "bellard",
             "desc": "",
             "type": "html5",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         },
         {
             "src": "/images/downhill.jpg",
             "name": "downhill",
             "desc": "",
             "type": "html5",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         },
         {
             "src": "/images/fishingfrenzy.jpg",
             "name": "fishing frenzy",
             "desc": "",
             "type": "html5",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         },
         {
             "src": "/images/fruitslasher.jpg",
             "name": "fruit slasher",
             "desc": "",
             "type": "html5",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://www.amazon.in/Free-Games-To-Play-Splash/dp/B07KQ277QZ/ref=sr_1_5?dchild=1&qid=1631534001&refinements=p_4%3AFree+Games+To+Play&s=mobile-apps&search-type=ss&sr=1-5"
         },
         {
             "src": "/images/Watercraft_Rush.jpg",
             "name": "watercraft rush",
             "desc": "",
             "type": "html5",
-            "tags": []
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
         }
     ]
 }
