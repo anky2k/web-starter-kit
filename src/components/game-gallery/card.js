@@ -4,7 +4,8 @@ import useDrawer from '../../hooks/use-drawer';
 import PhoneLoginFlow from '../phone-number-login'
 
 const myLoader = ({ src }) => {
-    return `http://d1lf3l2ndx18vw.cloudfront.net${src}`
+    // return `http://d1lf3l2ndx18vw.cloudfront.net${src}`
+    return `https://picsum.photos/seed/${src}`
   }
   
 
@@ -21,7 +22,8 @@ function Card({ data }) {
                         position-relative overflow-hidden
                         animate-appear bg-purple-100
                     `}
-                    src={src} 
+                    // src={src} 
+                    src={`${new Date().getTime()}/200`} 
                     alt={name}
                     layout="fill"
                     object-fit="cover"
