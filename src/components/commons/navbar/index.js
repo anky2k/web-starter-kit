@@ -25,54 +25,40 @@ function Nav() {
               </Link>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link href="/about">
+                  <Link href="/">
                     <a                    
                         className=" text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
                     >
-                        About
+                      Home
                     </a>
                  </Link>
-                 <Link href="/blog">
+                 <Link href="/categories">
                   <a                    
                     className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
                   >
-                    Blog
+                      Categories
                   </a>
-                  </Link>  
-                  <Link href="/portfolio">
-                  <a                    
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
-                  >
-                    Portfolio
-                  </a>
-                  </Link>  
-                  <Link href="/contact">
-                  <a                    
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
-                  >
-                    Contact
-                  </a>
-                  </Link>                                     
-                    <div className="dropdown dropdown-hover bg-transparent rounded-none">
-                      <Link href="/account">
-                        <div tabIndex="0" className="btn btn-ghost rounded-none
-                        text-white  hover:text-pink-900 active-pink-400
-                         focus:text-pink-900 px-3 py-2 
-                        text-sm font-medium capitalize">Account</div> 
-                      </Link>                 
-                      <ul tabIndex="0" className="p-2 shadow menu dropdown-content bg-bg-primary rounded-box w-52 text-sm font-medium capitalize">
-                        <li
-                          className="text-white hover:text-pink-900 active-pink-400p-0"
-                          onClick={() => show('', () => (<Confirm title={'Are you sure?'} onCancel={close} onConfirm={close}/>))}
-                        >
-                          <a>Unsubscribe</a>
-                        </li>                         
-                      </ul>
-                    </div>                    
+                  </Link>                    
+                  <div className="dropdown dropdown-hover bg-transparent rounded-none">
+                    <Link href="/account">
+                      <div tabIndex="0" className="btn btn-ghost rounded-none
+                      text-white  hover:text-pink-900 active-pink-400
+                        focus:text-pink-900 px-3 py-2 
+                      text-sm font-medium capitalize">Account</div> 
+                    </Link>                 
+                    <ul tabIndex="0" className="p-2 shadow menu dropdown-content bg-bg-primary rounded-box w-52 text-sm font-medium capitalize">
+                      <li
+                        className="text-white hover:text-pink-900 active-pink-400p-0"
+                        onClick={() => show('', () => (<Confirm title={'Are you sure?'} onCancel={close} onConfirm={close}/>))}
+                      >
+                        <a>Unsubscribe</a>
+                      </li>                         
+                    </ul>
+                  </div>                    
                 </div> 
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -129,7 +115,7 @@ function Nav() {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <div className="md:hidden" id="mobile-menu">
+          <div id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link href="/about">
                     <a                  

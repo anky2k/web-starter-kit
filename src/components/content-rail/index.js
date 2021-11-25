@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
-import Card from '../commons/card';
+import Card, { CardLoader } from '../commons/card';
 import Tray from '../commons/tray';
 import useMedia, { breakpoints } from '../../hooks/use-media'
 import { trimLowerCase } from '../../utils/string';
@@ -9,17 +9,23 @@ import { srGetAllGames } from '../../sources/games';
 const GameTypes = ['HTML5' , 'Board', 'Other', 'Action', 'Arcade']
 
 function Loader() {
-    return (
-        <div className="grid place-items-center h-2/3">
-            <div
-                className="
-                    animate-spin
-                    rounded-full
-                    h-24
-                    w-24
-                    border-t-2 border-b-2 border-pink-200
-                "
-            />
+    const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
+    return (     
+        <div className={`ml-2 mt-2`}>            
+            <Tray
+                type={type}
+            >
+                {
+                    new Array(4).fill(1).map((data, index) =>
+                        <div 
+                            key={index} 
+                            className="p-2"
+                        >
+                            <CardLoader />
+                        </div>
+                    )    
+                }
+            </Tray>                
         </div>
     )
 }

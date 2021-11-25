@@ -6,17 +6,17 @@ import PhoneLoginFlow from '../../phone-number-login'
 const myLoader = ({ src }) => {
     return `https://d1lf3l2ndx18vw.cloudfront.net${src}`
     // return `https://picsum.photos/seed/${src}`
-}
+  }
   
 
-function Card({ data }) {
+function CarouselCard({ data }) {
     const { src, name, desc, playstoreLink }  = data;
     const { show, close } = useDrawer();
     return (
         <div>
             <div role="button" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} 
                 className="card row-span-3 shadow-lg compact bg-base-100">             
-                <div className="w-32 h-40 md:w-72 md:h-48 lg:w-72 lg:h-48">
+                <div className="w-32 h-40 md:w-72 md:h-60 lg:w-72 lg:h-60">
                 <Image
                     loader={myLoader}
                     className={`
@@ -50,12 +50,12 @@ function Card({ data }) {
     )
 }
 
-function CardLoader({ data }) {
-    const { show, close } = useDrawer();
+function CarouselCardLoader({ data }) {
     return (
         <div>
             <div className="card row-span-3 shadow-lg compact bg-base-100">             
-                <div className="w-32 h-40 md:w-72 md:h-48 lg:w-72 lg:h-48 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500" />                
+                <div className="w-32 h-40 md:w-72 md:h-60 lg:w-72 lg:h-60
+                    bg-gradient-to-r from-purple-400 via-pink-500 to-red-500" />                
             </div> 
             {/* <div className="card-body p-0" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
                 <div>
@@ -68,7 +68,6 @@ function CardLoader({ data }) {
     )
 }
 
-export { CardLoader }
+export { CarouselCardLoader }
 
-export default Card
-
+export default CarouselCard

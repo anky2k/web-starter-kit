@@ -1,6 +1,7 @@
 import useTranslation from '../src/hooks/use-translation';
 import { SeoMeta } from '../src/components/commons/head-meta/seo-meta';
 import ContentRail from '../src/components/content-rail';
+import Carousel from '../src/components/commons/carousel';
 
 const Home = props => {
   const { t } = useTranslation();
@@ -13,7 +14,8 @@ const Home = props => {
           title: props.title
         }}
       />
-      <div className="w-full overflow-x-hidden">        
+      <div className="w-full overflow-x-hidden">     
+        <Carousel />   
         <ContentRail />
       </div>
     </div>
