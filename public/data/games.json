@@ -119,6 +119,70 @@
             "type": "html5",
             "tags": [],
             "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
+        },
+        {
+            "src": "/images/downhill.jpg",
+            "name": "downhill",
+            "desc": "",
+            "type": "arcade",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
+        },
+        {
+            "src": "/images/fishingfrenzy.jpg",
+            "name": "fishing frenzy",
+            "desc": "",
+            "type": "arcade",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
+        },
+        {
+            "src": "/images/fruitslasher.jpg",
+            "name": "fruit slasher",
+            "desc": "",
+            "type": "arcade",
+            "tags": [],
+            "playstoreLink": "https://www.amazon.in/Free-Games-To-Play-Splash/dp/B07KQ277QZ/ref=sr_1_5?dchild=1&qid=1631534001&refinements=p_4%3AFree+Games+To+Play&s=mobile-apps&search-type=ss&sr=1-5"
+        },
+        {
+            "src": "/images/Watercraft_Rush.jpg",
+            "name": "watercraft rush",
+            "desc": "",
+            "type": "arcade",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
+        },
+        {
+            "src": "/images/hindi-word-connect.png",
+            "name": "hindi word connect",
+            "desc": "",
+            "type": "action",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
+        },
+        {
+            "src": "/images/ludo-main-img.jpg",
+            "name": "ludo",
+            "desc": "",
+            "type": "action",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
+        },
+        {
+            "src": "/images/nine-man-mories-main.jpg",
+            "name": "nine man mories",
+            "desc": "",
+            "type": "action",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.charbhar.alignit.mills.ninemenmorris"
+        },
+        {
+            "src": "/images/parchici-ludo-main.jpg",
+            "name": "pachisi ludo",
+            "desc": "",
+            "type": "action",
+            "tags": [],
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.parcheesi.board.game.parchis.king.pachisi.star"
         }
     ]
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
 import Pill from '../commons/pill';
-import Card from './card';
+import Card from '../commons/card';
 import { trimLowerCase } from '../../utils/string'
 import { srGetAllGames } from '../../sources/games';
 

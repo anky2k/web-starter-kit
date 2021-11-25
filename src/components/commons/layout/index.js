@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return(
     <div>               
       <Nav />
-      <div className="top-4 relative overflow-auto">
+      <div className="relative overflow-auto bg-bg-primary h-full">      
         {children}
       </div>
     </div>
@@ -12,3 +12,4 @@ const Layout = ({ children }) => {
 }
 
 export default Layout;
+

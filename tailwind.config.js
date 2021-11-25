@@ -14,6 +14,7 @@ module.exports = {
         '2/5': '40%'
       },
       colors: {
+        'bg-primary': '#1E1929',
         bgPrimary: '#0f0617',
         textPrimary: '#cfc3ca',
         hoverLink: '#da76ff',
@@ -21,7 +22,7 @@ module.exports = {
         bgDrawer: '#1d001d',
         hoverAccordion: '#ff0091',
         hoverBgBlock: '#FFFFFF0F',
-        buttonBuyPlan: '#8230c6'
+        buttonBuyPlan: '#8230c6',        
       },
       screens: {
         xxs: '300px',
