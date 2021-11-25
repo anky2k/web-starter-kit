@@ -14,7 +14,7 @@ function HeadMeta() {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <title>{APP_NAME}</title>
 
-      <meta name="theme-color" content="#100618" />
+      <meta name="theme-color" content="#1E1929" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Accept-CH" content="Width, Viewport-Width, Downlink"></meta>
 

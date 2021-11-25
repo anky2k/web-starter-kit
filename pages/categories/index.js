@@ -7,13 +7,13 @@ const Categories = props => {
     <div className="flex h-screen">
       <SeoMeta
         data={{
-          title: props.title
+          title: 'some game portal'
         }}
       />
       <div className="w-full overflow-x-hidden">     
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {   
-                props.types.map((type, index) => 
+                ['All', 'HTML5' , 'Board', 'Other'].map((type, index) => 
                     // <Link 
                     //     key={index}
                     //     href="/categories/[type]" as={`/categories/${trimLowerCase(type)}`}>
@@ -36,14 +36,5 @@ const Categories = props => {
   );
 };
 
-export async function getServerSideProps() {
-  const types = ['All', 'HTML5' , 'Board', 'Other']
-  return {
-    props: {
-        title: 'some game',
-        types: types
-    }
-  };
-}
 
 export default Categories;
