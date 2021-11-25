@@ -22,12 +22,4 @@ const Home = props => {
   );
 };
 
-export async function getServerSideProps() {
-  return {
-    props: {
-      title: 'test title'
-    }
-  };
-}
-
 export default Home;
