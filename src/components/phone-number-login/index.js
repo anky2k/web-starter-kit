@@ -6,8 +6,8 @@ const EnterNumber = ({ onClose, onSubmit }) => (
     <div className="form-control w-full items-center mt-8">            
         <input type="tel" placeholder="Enter your mobile number" className="input input-bordered w-3/4" />
         <div className="mt-6 grid grid-cols-2 w-3/4">
-            <button className="btn btn-outline btn-primary mr-3" onClick={() => onClose()}>Cancel</button> 
-            <button className="btn btn-primary" onClick={() => onSubmit('otp')}>Proceed</button> 
+            <button className="btn btn-outline mr-3" onClick={() => onClose()}>Cancel</button> 
+            <button className="btn bg-gradient-to-r from-pink-500 hover:to-yellow-500" onClick={() => onSubmit('otp')}>Proceed</button> 
         </div>                  
     </div>
 )
@@ -17,9 +17,9 @@ const EnterOtp = ({ onSubmit, onClose, playstoreLink  }) => (
         <input type="tel" placeholder="Enter OTP" className="input input-bordered w-3/4" />    
 
         <div className="mt-6 grid grid-cols-2 w-3/4">
-            <button className="btn btn-outline btn-primary mr-3" onClick={() => onSubmit('number')}>Back</button> 
+            <button className="btn btn-outline mr-3" onClick={() => onSubmit('number')}>Back</button> 
             <button 
-                className="btn btn-primary"
+                className="btn bg-gradient-to-r from-pink-500 hover:to-yellow-500"
                 onClick={
                     () => {
                         window.open(playstoreLink);

@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
-import useDrawer from '../../hooks/use-drawer';
-import PhoneLoginFlow from '../phone-number-login'
+import useDrawer from '../../../hooks/use-drawer';
+import PhoneLoginFlow from '../../phone-number-login'
 
 const myLoader = ({ src }) => {
     return `https://d1lf3l2ndx18vw.cloudfront.net${src}`
@@ -14,13 +14,14 @@ function Card({ data }) {
     const { show, close } = useDrawer();
     return (
         <div>
-            <div role="button" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} className="card row-span-3 shadow-lg compact bg-base-100">             
-                <div className="w-32 h-48">
+            <div role="button" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} 
+                className="card row-span-3 shadow-lg compact bg-base-100">             
+                <div className="w-32 h-40 md:w-72 md:h-48 lg:w-72 lg:h-48">
                 <Image
                     loader={myLoader}
                     className={`
                         position-relative overflow-hidden
-                        animate-appear bg-purple-100
+                        animate-appear bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
                     `}
                     src={src} 
                     // src={`${new Date().getTime()}/150`} 
@@ -38,12 +39,13 @@ function Card({ data }) {
                     />            
                 </div>            
             </div> 
-            <div className="card-body" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
+            {/* <div className="card-body p-0" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
                 <div>
-                    <h2 className="card-title text-gray-600">{name}</h2>                 
+                    <div className="w-32 md:w-full lg:w-full capitalize                    
+                    line-clamp-2 text-base leading-normal mt-0 mb-2 px-3 py-2 text-white">{name}</div>
                     <p className="text-base-content text-opacity-40">{desc}</p>
-                </div>
-            </div>
+                </div>                 
+            </div> */}
         </div>
     )
 }

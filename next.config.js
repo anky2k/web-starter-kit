@@ -28,8 +28,7 @@ const nextConfig = {
     dirs: ['pages', 'src'], // Only run ESLint on the 'pages' and 'src' directories during production builds (next build)
   },
   images: {    
-    domains: ['d1lf3l2ndx18vw.cloudfront.net'],
-    // domains: ['picsum.photos'],
+    domains: ['d1lf3l2ndx18vw.cloudfront.net', 'picsum.photos'],
     loader: 'custom'
   },
   // would suggest keeping this false
