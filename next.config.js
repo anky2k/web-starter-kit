@@ -46,7 +46,7 @@ const nextConfig = {
     basePath: BASE_PATH,
     mockMode: MOCK_MODE,
     appEnv: APP_ENV
-  },
+  },  
   generateBuildId: async () => appVersion,
   webpack: config => {
     config.output.publicPath = '';

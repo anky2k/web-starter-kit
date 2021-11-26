@@ -1,34 +1,34 @@
 import { useState } from 'react'
-import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
+// import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
 import Card, { CardLoader } from '../commons/card';
 import Tray from '../commons/tray';
 import useMedia, { breakpoints } from '../../hooks/use-media'
 import { trimLowerCase } from '../../utils/string';
-import { srGetAllGames } from '../../sources/games';
+// import { srGetAllGames } from '../../sources/games';
 
-const GameTypes = ['HTML5' , 'Board', 'Other', 'Action', 'Arcade']
+const GameTypes = ['Board', 'Action', 'Arcade', 'HTML5', 'Other']
 
-function Loader() {
-    const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
-    return (     
-        <div className={`ml-2 mt-2`}>            
-            <Tray
-                type={type}
-            >
-                {
-                    new Array(4).fill(1).map((data, index) =>
-                        <div 
-                            key={index} 
-                            className="p-2"
-                        >
-                            <CardLoader />
-                        </div>
-                    )    
-                }
-            </Tray>                
-        </div>
-    )
-}
+// function Loader() {
+//     const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
+//     return (     
+//         <div className={`ml-2 mt-2`}>            
+//             <Tray
+//                 type={type}
+//             >
+//                 {
+//                     new Array(4).fill(1).map((data, index) =>
+//                         <div 
+//                             key={index} 
+//                             className="p-2"
+//                         >
+//                             <CardLoader />
+//                         </div>
+//                     )    
+//                 }
+//             </Tray>                
+//         </div>
+//     )
+// }
 
 function ContentContainer({ title, content, total, currentIndex }) {
     const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
@@ -60,18 +60,18 @@ const filterByType = (type, data) => data.filter(item => {
     return trimLowerCase(item.type) === trimLowerCase(type)
 })
 
-function ContentRail() {
-    const [games, setGames] = useState([])
-    const dataFetcher = () => srGetAllGames();
-    const onDataFetched = data => {
-        setGames(data.data)
-    };
-    const [fetchState] = useFetcher(dataFetcher, onDataFetched);
+function ContentRail({ data = [] }) {
+    const [games, setGames] = useState(data)
+    // const dataFetcher = () => srGetAllGames();
+    // const onDataFetched = data => {
+    //     setGames(data.data)
+    // };
+    // const [fetchState] = useFetcher(dataFetcher, onDataFetched);
     return (
-        <ComponentStateHandler
-          state={fetchState}
-          Loader={Loader}
-        >           
+        // <ComponentStateHandler
+        //   state={fetchState}
+        //   Loader={Loader}
+        // >           
             <>
                 <div className="w-full h-full flex flex-col mt-2">
                     {   
@@ -88,7 +88,7 @@ function ContentRail() {
                     }
                 </div>
             </>            
-        </ComponentStateHandler>
+        // </ComponentStateHandler>
       );
 }
 

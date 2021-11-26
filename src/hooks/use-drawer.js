@@ -2,7 +2,7 @@ import React, {
   createContext, useContext, useState, useRef
 } from 'react';
 
-import useOverLay from './use-overlay';
+// import useOverLay from './use-overlay';
 import useMedia, { breakpoints } from './use-media';
 import Drawer from '../components/commons/drawer';
 import Dialog from '../components/commons/dialog';
@@ -15,7 +15,7 @@ const DrawerContext = createContext({
 });
 
 export const DrawerProvider = ({ children }) => {
-  const { show: showOverLay, hide: hideOverLay } = useOverLay();
+  // const { show: showOverLay, hide: hideOverLay } = useOverLay();
   const ComponentProps = useRef({});
   const Comp = useMedia(breakpoints, [Dialog, Dialog, Drawer], Drawer);
 
@@ -28,7 +28,7 @@ export const DrawerProvider = ({ children }) => {
   const show = (title, content, type = 'md', props) => {
     ComponentProps.current = props;
     DrawerContent = content;
-    showOverLay();
+    // showOverLay();
     setState({
       visible: true,
       title,
@@ -38,7 +38,7 @@ export const DrawerProvider = ({ children }) => {
 
   const close = () => {
     DrawerContent = null;
-    hideOverLay();
+    // hideOverLay();
     setState({
       visible: false
     });
