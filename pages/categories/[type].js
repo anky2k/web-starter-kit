@@ -4,7 +4,7 @@ import Card from '../../src/components/commons/card';
 import { trimLowerCase } from '../../src/utils/string'
 
 const Types = props => {
-  const games = props.res
+  const games = props.res || []
   return (
     <div className="flex h-screen">
       <SeoMeta
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
         '/categories/board',
         '/categories/other'
       ],
-      fallback: true,
+      fallback: false
     }
   }
 
