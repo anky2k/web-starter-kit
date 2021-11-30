@@ -48,6 +48,9 @@ function HeadMeta() {
       {/* Orientation  */}
       <meta name="screen-orientation" content="portrait" />
 
+      <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
       {/* Main Link Tags  */}
       <link href={withBasePath('icons/favicon/favicon-16x16.png')} rel="icon" type="image/png" sizes="16x16" />
       <link href={withBasePath('icons/favicon/favicon-32x32.png')} type="image/png" sizes="32x32" />

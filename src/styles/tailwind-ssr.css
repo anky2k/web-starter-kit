@@ -2520,6 +2520,10 @@ html {
 }
 
 @media (min-width: 900px) {
+  .md\:ml-20 {
+    margin-left: 5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2538,6 +2542,10 @@ html {
 
   .md\:w-72 {
     width: 18rem;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:w-full {
@@ -2575,6 +2583,10 @@ html {
     margin-right: 1rem;
   }
 
+  .lg\:ml-20 {
+    margin-left: 5rem;
+  }
+
   .lg\:h-48 {
     height: 12rem;
   }
@@ -2585,6 +2597,10 @@ html {
 
   .lg\:w-72 {
     width: 18rem;
+  }
+
+  .lg\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .lg\:w-full {

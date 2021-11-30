@@ -16,7 +16,7 @@ const Home = props => {
         }}
       />
       <div className="w-full overflow-x-hidden">     
-        <Carousel />   
+        <Carousel data={data}/>   
         <ContentRail data={data} />
       </div>
     </div>
