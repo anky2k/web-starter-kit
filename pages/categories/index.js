@@ -1,6 +1,6 @@
 import { SeoMeta } from '../../src/components/commons/head-meta/seo-meta';
-// import Link from 'next/link'
-// import { trimLowerCase } from '../../src/utils/string'
+import Link from 'next/link'
+import { trimLowerCase } from '../../src/utils/string'
 
 const Categories = props => {
   return (
@@ -14,10 +14,11 @@ const Categories = props => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {   
                 ['All', 'HTML5' , 'Board', 'Other'].map((type, index) => 
-                    // <Link 
-                    //     key={index}
-                    //     href="/categories/[type]" as={`/categories/${trimLowerCase(type)}`}>
-                        <div 
+                    <Link 
+                        key={index}
+                        passHref
+                        href="/categories/[type]" as={`/categories/${trimLowerCase(type)}`}>
+                        <a 
                             key={index}
                             className="card text-center shadow-2xl lg:card-side cursor-pointer
                             bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-accent-content 
@@ -26,8 +27,8 @@ const Categories = props => {
                             <div className="pt-14 pl-8 w-32 h-40 md:w-72 md:h-48 lg:w-72 lg:h-48 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">                
                                 <p className="font-bold text-xl capitalize">{type}</p>                   
                             </div>
-                        </div>
-                    // </Link>                    
+                        </a>
+                    </Link>                    
             )    
             }
         </div>
