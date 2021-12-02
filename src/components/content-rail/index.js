@@ -1,34 +1,8 @@
 import { useState } from 'react'
-// import ComponentStateHandler, { useFetcher } from '../commons/component-state-handler';
 import Card, { CardLoader } from '../commons/card';
 import Tray from '../commons/tray';
 import useMedia, { breakpoints } from '../../hooks/use-media'
 import { trimLowerCase } from '../../utils/string';
-// import { srGetAllGames } from '../../sources/games';
-
-const GameTypes = ['Board', 'Action', 'Arcade', 'HTML5', 'Other']
-
-// function Loader() {
-//     const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
-//     return (     
-//         <div className={`ml-2 mt-2`}>            
-//             <Tray
-//                 type={type}
-//             >
-//                 {
-//                     new Array(4).fill(1).map((data, index) =>
-//                         <div 
-//                             key={index} 
-//                             className="p-2"
-//                         >
-//                             <CardLoader />
-//                         </div>
-//                     )    
-//                 }
-//             </Tray>                
-//         </div>
-//     )
-// }
 
 function ContentContainer({ title, content, total, currentIndex }) {
     const type = useMedia(breakpoints, ['lg', 'md', 'sm'], 'md');
@@ -60,35 +34,25 @@ const filterByType = (type, data) => data.filter(item => {
     return trimLowerCase(item.type) === trimLowerCase(type)
 })
 
-function ContentRail({ data = [] }) {
-    const [games, setGames] = useState(data)
-    // const dataFetcher = () => srGetAllGames();
-    // const onDataFetched = data => {
-    //     setGames(data.data)
-    // };
-    // const [fetchState] = useFetcher(dataFetcher, onDataFetched);
-    return (
-        // <ComponentStateHandler
-        //   state={fetchState}
-        //   Loader={Loader}
-        // >           
-            <>
-                <div className="w-full h-full flex flex-col mt-2">
-                    {   
-                        GameTypes.map(
-                            (data, index) => 
-                                <ContentContainer 
-                                    currentIndex={index}
-                                    total={GameTypes.length}
-                                    key={index} 
-                                    title={data}
-                                    content={filterByType(data, games)}
-                                />
-                            )    
-                    }
-                </div>
-            </>            
-        // </ComponentStateHandler>
+function ContentRail({ data = [], categories = [] }) {
+    const [games] = useState(data)  
+    return (        
+        <>
+            <div className="w-full h-full flex flex-col mt-2">
+                {   
+                    categories.map(
+                        (data, index) => 
+                            <ContentContainer 
+                                currentIndex={index}
+                                total={categories.length}
+                                key={index} 
+                                title={data}
+                                content={filterByType(data, games)}
+                            />
+                        )    
+                }
+            </div>
+        </>            
       );
 }
 
