@@ -9,7 +9,7 @@ function ContentContainer({ title, content, total, currentIndex }) {
     return (
         <div className={`ml-2 mt-2 ${currentIndex === (total - 1) && 'pb-20'}`}>
             <h1 className="text-base md:text-xl lg:text-2xl ml-2 
-            font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-pink-200">
+            font-extrabold text-white">
               {title}
             </h1>
             <Tray

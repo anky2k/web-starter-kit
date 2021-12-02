@@ -40,9 +40,6 @@ const Categories = props => {
 };
 
 export async function getStaticProps(context) {
-  const { params } = context;
-  const { type } = params;
-
   let res = await srGetCategories()
   if (!res) {
     return {
