@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import ComponentStateHandler, { useFetcher } from '../component-state-handler'
 import CarouselCard from '../card/carousel-cards'
-import { srGetAllGames } from '../../../sources/games'
 import Slider from "react-slick";
 
 const settings = {
@@ -80,61 +78,23 @@ function Loader() {
 
 
 function CarouselComp ({ data = []}) {
-    const [games, setGames] = useState(data)
-    const dataFetcher = () => srGetAllGames();
-    const onDataFetched = data => {
-        setGames(data.data)
-    };
-    const [fetchState] = useFetcher(dataFetcher, onDataFetched);
-        return (
-            <ComponentStateHandler
-            state={fetchState}
-            Loader={Loader}
-            >  
-                {/* <Carousel
-                    ssr
-                    deviceType={'mobile'} // `deviceType` needs to be set
-                    infinite={true}
-                    autoPlay={true}
-                    containerClass='carousel-container'
-                    itemClass='carousel-image-item'
-                    autoPlaySpeed={6000}
-                    responsive={responsive}
-                    >
-                    {
-                        games.slice(0, 6).map((data, index) =>
-                            <div 
-                                key={index} 
-                                className="p-2"
-                            >
-                                <CarouselCard data={data} />
-                            </div>
-                        )    
-                    }
-                </Carousel> */}
-                <div className="md:ml-20 lg:ml-20 md:w-11/12 lg:w-11/12">
-                    <Slider {...settings}>
-                        {
-                            games.slice(0, 6).map((data, index) =>
-                                <div 
-                                    key={index} 
-                                    className="p-2"
-                                >
-                                    <CarouselCard data={data} />
-                                </div>
-                            )    
-                        }
-                    </Slider>
-                </div>
-            </ComponentStateHandler>
-        )
-    // return (
-    //     <ComponentStateHandler
-    //       state={fetchState}
-    //       Loader={Loader}>
-    //         <Loader />
-    //     </ComponentStateHandler>
-    // )
+    const [games] = useState(data)    
+    return (                   
+        <div className="md:ml-20 lg:ml-20 md:w-11/12 lg:w-11/12">
+            <Slider {...settings}>
+                {
+                    games.slice(0, 6).map((data, index) =>
+                        <div 
+                            key={index} 
+                            className="p-2"
+                        >
+                            <CarouselCard data={data} />
+                        </div>
+                    )    
+                }
+            </Slider>
+        </div>
+    )    
 }
 
 export default CarouselComp

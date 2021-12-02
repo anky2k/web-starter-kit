@@ -4,9 +4,9 @@ import useDrawer from '../../../hooks/use-drawer';
 import PhoneLoginFlow from '../../phone-number-login'
 
 const myLoader = ({ src }) => {
-    return `https://d1lf3l2ndx18vw.cloudfront.net${src}`
-    // return `https://picsum.photos/seed/${src}`
-  }
+    // return src ? `https://d1lf3l2ndx18vw.cloudfront.net${src}` : `https://picsum.photos/seed/${src}${new Date().getTime()}/150`
+    return `https://picsum.photos/seed/${new Date().getTime()}/150`
+}
   
 
 function CarouselCard({ data }) {
@@ -23,8 +23,7 @@ function CarouselCard({ data }) {
                         position-relative overflow-hidden
                         animate-appear bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
                     `}
-                    src={src} 
-                    // src={`${new Date().getTime()}/150`} 
+                    src={src || `https://picsum.photos/seed/${new Date().getTime()}/150`} 
                     alt={name}
                     layout="fill"
                     object-fit="cover"
@@ -39,13 +38,17 @@ function CarouselCard({ data }) {
                     />            
                 </div>            
             </div> 
-            {/* <div className="card-body p-0" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
+            <div className="card-body p-0" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
                 <div>
-                    <div className="w-32 md:w-full lg:w-full capitalize                    
-                    line-clamp-2 text-base leading-normal mt-0 mb-2 px-3 py-2 text-white">{name}</div>
+                    <div                         
+                        className="w-32 md:w-full lg:w-full capitalize   
+                        absolute
+                        font-bold
+                        top-[90px] md:top-[190px] lg:top-[190px]
+                        line-clamp-3 text-base leading-normal mt-0 mb-2 px-3 py-2 text-white">{name}</div>
                     <p className="text-base-content text-opacity-40">{desc}</p>
                 </div>                 
-            </div> */}
+            </div>
         </div>
     )
 }

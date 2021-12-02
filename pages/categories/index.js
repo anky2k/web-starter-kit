@@ -1,8 +1,10 @@
 import { SeoMeta } from '../../src/components/commons/head-meta/seo-meta';
 import Link from 'next/link'
 import { trimLowerCase } from '../../src/utils/string'
+import { srGetCategories } from '../../src/sources/games';
 
 const Categories = props => {
+  const { data = [] } = props.res
   return (
     <div className="flex h-screen">
       <SeoMeta
@@ -13,7 +15,7 @@ const Categories = props => {
       <div className="w-full overflow-x-hidden">     
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {   
-                ['All', 'HTML5' , 'Board', 'Other'].map((type, index) => 
+                data.map((type, index) => 
                     <Link 
                         key={index}
                         passHref
@@ -36,6 +38,19 @@ const Categories = props => {
     </div>
   );
 };
+
+export async function getStaticProps(context) {
+  let res = await srGetCategories()
+  if (!res) {
+    return {
+      notFound: true,
+    }
+  }  
+
+  return {
+    props: { res },
+  }
+}
 
 
 export default Categories;

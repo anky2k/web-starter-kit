@@ -1,188 +1,262 @@
 {
     "data": [
         {
-            "src": "/images/bid-16-main.jpg",
-            "name": "bid 16",
-            "desc": "",
-            "type": "other",
-            "tags": [],
+            "id": "1",
+            "name": "Business Game Offline",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
+        },        
+        {
+            "id": "2",
+            "name": "Business Game India",
+            "type": "board",
             "playstoreLink": "https://play.google.com/store/apps/details?id=com.monopoli.crazypoly.business.game.india"
         },
         {
-            "src": "/images/business-main-img.jpg",
-            "name": "bussiness",
-            "desc": "",
+            "id": "3",
+            "name": "Word Connect 2020 - Word Puzzle Game",
             "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/business-main-india.jpg",
-            "name": "bussiness india",
-            "desc": "",
-            "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.monopoli.crazypoly.business.game.india"
-        },
-        {
-            "src": "/images/business-main-india.jpg",
-            "name": "bussiness game",
-            "desc": "",
-            "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/dominos-main-img.jpg",
-            "name": "dominos",
-            "desc": "",
-            "type": "other",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
-        },
-        {
-            "src": "/images/hindi-word-connect.png",
-            "name": "hindi word connect",
-            "desc": "",
-            "type": "other",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
-        },
-        {
-            "src": "/images/ludo-main-img.jpg",
-            "name": "ludo",
-            "desc": "",
-            "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
-        },
-        {
-            "src": "/images/nine-man-mories-main.jpg",
-            "name": "nine man mories",
-            "desc": "",
-            "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.charbhar.alignit.mills.ninemenmorris"
-        },
-        {
-            "src": "/images/parchici-ludo-main.jpg",
-            "name": "pachisi ludo",
-            "desc": "",
-            "type": "board",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.parcheesi.board.game.parchis.king.pachisi.star"
-        },
-        {
-            "src": "/images/word-connect-img.jpg",
-            "name": "word connect",
-            "desc": "",
-            "type": "other",
-            "tags": [],
             "playstoreLink": "https://play.google.com/store/apps/details?id=com.crossword.word.game.search.puzzle.connect"
         },
         {
-            "src": "/images/bellard.jpg",
-            "name": "bellard",
-            "desc": "",
-            "type": "html5",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/downhill.jpg",
-            "name": "downhill",
-            "desc": "",
-            "type": "html5",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/fishingfrenzy.jpg",
-            "name": "fishing frenzy",
-            "desc": "",
-            "type": "html5",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/fruitslasher.jpg",
-            "name": "fruit slasher",
-            "desc": "",
-            "type": "html5",
-            "tags": [],
-            "playstoreLink": "https://www.amazon.in/Free-Games-To-Play-Splash/dp/B07KQ277QZ/ref=sr_1_5?dchild=1&qid=1631534001&refinements=p_4%3AFree+Games+To+Play&s=mobile-apps&search-type=ss&sr=1-5"
-        },
-        {
-            "src": "/images/Watercraft_Rush.jpg",
-            "name": "watercraft rush",
-            "desc": "",
-            "type": "html5",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/downhill.jpg",
-            "name": "downhill",
-            "desc": "",
-            "type": "arcade",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/fishingfrenzy.jpg",
-            "name": "fishing frenzy",
-            "desc": "",
-            "type": "arcade",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/fruitslasher.jpg",
-            "name": "fruit slasher",
-            "desc": "",
-            "type": "arcade",
-            "tags": [],
-            "playstoreLink": "https://www.amazon.in/Free-Games-To-Play-Splash/dp/B07KQ277QZ/ref=sr_1_5?dchild=1&qid=1631534001&refinements=p_4%3AFree+Games+To+Play&s=mobile-apps&search-type=ss&sr=1-5"
-        },
-        {
-            "src": "/images/Watercraft_Rush.jpg",
-            "name": "watercraft rush",
-            "desc": "",
-            "type": "arcade",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.business.board.dice.game.crazypoly.monopoli"
-        },
-        {
-            "src": "/images/hindi-word-connect.png",
-            "name": "hindi word connect",
-            "desc": "",
-            "type": "action",
-            "tags": [],
+            "id": "4",
+            "name": "Ludo Classic Star – King of Dice Board Game ludo",
+            "type": "board",
             "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
         },
         {
-            "src": "/images/ludo-main-img.jpg",
-            "name": "ludo",
-            "desc": "",
-            "type": "action",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
+            "id": "5",
+            "name": "Dominoes Offline - Free Dice Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.jbb.tile.dominoes.free.online.game"
         },
         {
-            "src": "/images/nine-man-mories-main.jpg",
-            "name": "nine man mories",
-            "desc": "",
-            "type": "action",
-            "tags": [],
+            "id": "6",
+            "name": "Parchisi Superstar - Parcheesi Dice Board Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.parcheesi.board.game.parchis.king.pachisi.star"
+        },
+        {
+            "id": "7",
+            "name": "Nine Men's Morris Game 2021",
+            "type": "other",
             "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.charbhar.alignit.mills.ninemenmorris"
         },
         {
-            "src": "/images/parchici-ludo-main.jpg",
-            "name": "pachisi ludo",
-            "desc": "",
+            "id": "8",
+            "name": "Word Connect 2021 - Wordcross Safari Free Game",
+            "type": "html5",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.crossword.game.search.puzzle.wordscapes.wordconnect"
+        },
+        {
+            "id": "9",
+            "name": "शब्दों की खोज - Word Connect Game",
+            "type": "html5",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.wordconnect.wordsearch.hindiwordsearch"
+        },
+        {
+            "id": "10",
+            "name": "Bead 16 - Sholo Guti, Damru Board Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.baghbakri.free.shologuti.bead16.damru"
+        },
+        {
+            "id": "11",
+            "name": "Princess Makeup And Dress Up Game 2021",
+            "type": "arcade",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.girlsgames.princess.dress.up.makeup.game.free"
+        },
+        {
+            "id": "12",
+            "name": "Three Men's Morris 2021 Free Board Game",
+            "type": "arcade",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.boardgame.charbhar.alignit.mills.threemensmorris"
+        },
+        {
+            "id": "13",
+            "name": "Reversi Board Game 2021",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.board.game.free.othellonew.reversi"
+        },
+        {
+            "id": "14",
+            "name": "Farm Crush : Farm Match 3 Games",
+            "type": "casual",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.farmgarden.fruitsplash.farmharvest"
+        },
+        {
+            "id": "15",
+            "name": "Baby Phone : Babyfone Kids Game of Animal",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.kidsgame.toyphone.babyfone.baby.phone"
+        },
+        {
+            "id": "16",
+            "name": "Mahjong 2021 - Tile Craft Matching Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.tilecraft.crush.matching.game.mahjong"
+        },
+        {
+            "id": "17",
+            "name": "Call Break (Ghochi)",
             "type": "action",
-            "tags": [],
-            "playstoreLink": "https://play.google.com/store/apps/details?id=com.parcheesi.board.game.parchis.king.pachisi.star"
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.callbreak.cardgame.multiplayer.gochi.game"
+        },
+        {
+            "id": "18",
+            "name": "4 Pics One Word Guessing Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.pictoword.picture.wordgame.four.pics.one.word.guessing.games"
+        },
+        {
+            "id": "19",
+            "name": "Vyapari : Business Dice Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.businessboardgame.business.board.vyapari.game"
+        },
+        {
+            "id": "20",
+            "name": "Word Ocean 2021 - Word Connect Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.word.game.find.wordcross.puzzle.wordscapes.connect"
+        },
+        {
+            "id": "21",
+            "name": "Wood Block Puzzle",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.wood.blockpuzzle.puzzlegames.tetris"
+        },
+        {
+            "id": "22",
+            "name": "Math Game For Kids and Adult",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.mathgameforkids.add.subtract.multiply.divide.mathgame"
+        },
+        {
+            "id": "23",
+            "name": "Kids Matching Game : Educational Game for Toddlers",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.kidsgames.educational.fun.matchinggames.kids"
+        },
+        {
+            "id": "24",
+            "name": "3 2 5 Card Game (Teen do paanch)",
+            "type": "cards",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.cardgame.teendopaanch.doteenpanch.card.free"
+        },
+        {
+            "id": "25",
+            "name": "Toy Crash Cube Blast : Block Blasting Game",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.cube.blast.cubepop.toycrush"
+        },
+        {
+            "id": "26",
+            "name": "Cooking Town : Kitchen Chef Game",
+            "type": "casual",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.cookinggames.cookingmadness.mexicanrestaurants.cookingtown.kitchen.chefgames"
+        },
+        {
+            "id": "27",
+            "name": "Block Puzzle Merge game : Shoot n Merge fun",
+            "type": "arcade",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.shoot.merge.block1010.game2048"
+        },
+        {
+            "id": "28",
+            "name": "Kids Math Game : Add Subtract Multiplication Free",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.kidsmathgame.freemath.learner.multiplication.math"
+        },
+        {
+            "id": "29",
+            "name": "Word Connect Game 2020",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.wordsearch.words.puzzle.game.word.connect"
+        },
+        {
+            "id": "30",
+            "name": "Doors and rooms escape challenge",
+            "type": "casual",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.onehundred.doors.game"
+        },
+        {
+            "id": "31",
+            "name": "Cargo Driver Truck Game",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.flow.truck.fill.cargo.delivery.cargodrive"
+        },
+        {
+            "id": "32",
+            "name": "Emoji Games : Word by Picture Free Guessing Game",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.pictoword.word.guessing.games.emojiquiz"
+        },
+        {
+            "id": "33",
+            "name": "Cube Blast : Smash and Crush Toy",
+            "type": "action",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.toy.blast.cubes.pop.blockpuzzle"
+        },
+        {
+            "id": "34",
+            "name": "Wooden Block Puzzle 2021",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.blockgames.wood.blockpuzzle.blocktetra.woodenblockpuzzle"
+        },
+        {
+            "id": "35",
+            "name": "Merge Home",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.mergetown.mergehome"
+        },
+        {
+            "id": "36",
+            "name": "Can You Escape : 100 Rooms & Doors",
+            "type": "action",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.doorsescapegames.canyouescape.roompuzzle.doorsandrooms"
+        },
+        {
+            "id": "37",
+            "name": "Can you escape the 100 room and doors",
+            "type": "action",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.doors.escape.game.hundreddoors"
+        },
+        {
+            "id": "38",
+            "name": "Onet Games : Classic Connect Animal & Fruit Link",
+            "type": "kids",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.onetgames.classic.animal.fruit.link.onet"
+        },
+        {
+            "id": "39",
+            "name": "Fruit Garden Blast",
+            "type": "html5",
+            "playstoreLink": "https://galaxystore.samsung.com/detail/com.cmg.fruitfarmgarden"
+        },
+        {
+            "id": "40",
+            "name": "Sweet Candy Splash Story",
+            "type": "html5",
+            "playstoreLink": ""
+        },
+        {
+            "id": "41",
+            "name": "Fruit Garden Mania",
+            "type": "html5",
+            "playstoreLink": ""
+        },
+        {
+            "id": "42",
+            "name": "Sweet Fruit: Fruit Splash",
+            "type": "html5",
+            "playstoreLink": ""
+        },
+        {
+            "id": "43",
+            "name": "Fruit Link Splash",
+            "type": "html5",
+            "playstoreLink": ""
         }
     ]
 }

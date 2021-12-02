@@ -29,7 +29,10 @@ export async function getStaticPaths() {
         '/categories/all',
         '/categories/html5',
         '/categories/board',
-        '/categories/other'
+        '/categories/casual',
+        '/categories/arcade',
+        '/categories/kids',        
+        '/categories/action', 
       ],
       fallback: false
     }

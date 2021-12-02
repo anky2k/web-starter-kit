@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": "4",
+            "name": "Ludo Classic Star – King of Dice Board Game ludo",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.classic.board.game.superking.star.ludo"
+        },
+        {
+            "id": "14",
+            "name": "Farm Crush : Farm Match 3 Games",
+            "type": "casual",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.farmgarden.fruitsplash.farmharvest"
+        },
+        {
+            "id": "21",
+            "name": "Wood Block Puzzle",
+            "type": "board",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.wood.blockpuzzle.puzzlegames.tetris"
+        },
+        {
+            "id": "24",
+            "name": "3 2 5 Card Game (Teen do paanch)",
+            "type": "cards",
+            "playstoreLink": "https://play.google.com/store/apps/details?id=com.cardgame.teendopaanch.doteenpanch.card.free"
+        }
+    ]
+}
