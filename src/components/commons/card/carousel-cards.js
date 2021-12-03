@@ -8,7 +8,7 @@ import PhoneLoginFlow from '../../phone-number-login'
 function CarouselCard({ data }) {
     const { src, name, desc, playstoreLink, id }  = data;
     const iconUrl = `/images/${id}/icon.png`
-    const imageUrl = `/images/2/landscape/ss1.jpg`
+    const imageUrl = `/images/${id}/landscape/ss1.jpg`
     const { show, close } = useDrawer();
     return (
         <div>
