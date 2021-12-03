@@ -2,10 +2,10 @@
 
 export const apiBaseEndPoints = {
   local: {
-    app: 'http://localhost:3000'
+    app: 'http://localhost:3005'
   },
   development: {
-    app: 'http://localhost:3000'
+    app: 'http://localhost:3005'
   },
   staging: {
     app: 'https://d1lf3l2ndx18vw.cloudfront.net'    
