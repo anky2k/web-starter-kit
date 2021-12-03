@@ -9,7 +9,7 @@ import PhoneLoginFlow from '../../phone-number-login'
 function Card({ data }) {
     const { src, name, desc, playstoreLink, id }  = data;
     const iconUrl = `/images/${id}/icon.png`
-    const imageUrl = `/images/1/potrait/ss1.jpg`
+    const imageUrl = `/images/${id}/icon.png`
     const { show, close } = useDrawer();
     return (
         <div>
