@@ -47,7 +47,7 @@ function CarouselCard({ data }) {
 function CarouselCardLoader({ data }) {
     return (
         <div>
-            <div className="card row-span-3 shadow-lg compact bg-base-100">             
+            <div className="card shadow-lg compact bg-base-100">             
                 <div className="w-32 h-40 md:w-72 md:h-60 lg:w-72 lg:h-60
                     bg-gradient-to-r from-purple-400 via-pink-500 to-red-500" />                
             </div>             

@@ -12,17 +12,24 @@ function Nav() {
     <div className="sticky top-0 z-50">
       <nav className="bg-bg-primary">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16">            
             <div className="flex items-center">
-            <Link href="/">
-              <div className="flex-shrink-0 cursor-pointer">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-pink-500.svg"
-                  alt="Workflow"
-                />
-              </div>
-              </Link>
+              <Link href="/">
+                <div className="flex-shrink-0 cursor-pointer">
+                  <img
+                    className="h-8 w-8"
+                    src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+                    alt="Workflow"
+                  />                
+                </div>              
+              </Link>         
+              <div className={`
+                  cursor-pointer
+                  hidden md:block lg:block pl-2
+                  text-xl font-bold text-white
+                `}>
+                  PlayZone
+              </div>                   
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/">
@@ -57,7 +64,15 @@ function Nav() {
                   </div>                    
                 </div> 
               </div>
-            </div>
+            </div>            
+              <div 
+                className={`
+                  block md:hidden lg:hidden
+                  text-xl font-bold text-white
+                  cursor-pointer
+                `}
+                >PlayZone
+              </div>     
             <div className="-mr-2 flex">
               <button
                 onClick={() => setIsOpen(!isOpen)}

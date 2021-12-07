@@ -57,33 +57,13 @@ const settings = {
         ]
     };
 
-function Loader() {
-    return (     
-        <div className={`ml-2 mt-2 mr-2`}>             
-            {
-                new Array(1).fill(1).map((data, index) =>
-                    <div 
-                        key={index} 
-                        className="w-full h-40 md:h-60 lg:h-60
-                        rounded-md
-                        text-center     
-                        pt-16                   
-                        bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
-                    />
-                )    
-            }
-        </div>
-    )
-}
-
-
 function CarouselComp ({ data = []}) {
     const [games] = useState(data)    
     return (                   
         <div className="md:ml-20 lg:ml-20 md:w-11/12 lg:w-11/12">
             <Slider {...settings}>
                 {
-                    games.slice(0, 6).map((data, index) =>
+                    games.map((data, index) =>
                         <div 
                             key={index} 
                             className="p-2"
