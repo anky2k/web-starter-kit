@@ -1,21 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 const Img = React.memo(({
-  src, alt = 'localhost', title, height, width, onClick, className
+  src, alt = 'localhost', title, height, width, onClick, loading = 'lazy'
 }) => {
-  const aspectRatio = (height / width) * 100;
-
-  const loader = () => `https://via.placeholder.com/${width}`
-
   return (
     <>
       <Image
-        className={className}
         height={height}
         width={width}
-        style={{ paddingBottom: `${aspectRatio}%` }}
-        loader={loader}
-        src={src}
+        layout="responsive"
+        loading={loading}
+        src={`https://picsum.photos/seed/${Math.random()}${src}`}
         alt={alt}
         title={title}
         placeholder="blur"

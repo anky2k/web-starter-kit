@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 
 export const devices = ['mobile', 'desktop'];
 
-export const getDeviceType = () => {
+export const getDeviceType = userAgent => {
   let device = 'desktop';
-  if (!navigator) {
-    return device;
+  if (navigator) {
+    userAgent = navigator.userAgent
   }
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) device = 'mobile';
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) device = 'mobile';
   return device;
 };
 

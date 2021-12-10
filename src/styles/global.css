@@ -4,26 +4,32 @@
 *{
     margin: 0;
 }
-.Video_sheet{
-  /* scroll-snap-type: y mandatory; */
-  height: 100vh;
-}
-.video_card{
-  /* scroll-snap-align: start; */
-}
-.profile-bg{
-  align-items: center;
-  background-image: url("https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/album-628a1f27c2ed684e4454d53f4c042f7a.svg");
+
+.rail{
+  @apply w-full;
+  @apply inline-flex;
+  @apply overflow-x-auto;
+  @apply scrollbar-hide;    
 }
 
-
-.swiper-wrapper{
-  max-height: 100vh;
+.card{
+  position: relative;
+  display: block;
+  transition: transform 400ms;
 }
 
+.rail:focus-within .card,
+.rail:hover .card {
+  transform: translateX(-25%);
+}
 
-.rail-base{
-  @apply min-w-full;
-  @apply flex;
-  @apply scrollbar-hide;
+.card:focus ~ .card,
+.card:hover ~ .card {
+  transform: translateX(25%);
+}
+
+.rail .card:focus,
+.rail .card:hover {
+  transform: scale(1.5);
+  z-index: 1;
 }
