@@ -22,5 +22,6 @@ const Img = React.memo(({
     </>
   );
 });
+
 Img.displayName = 'ImageComponent'
 export default Img;
