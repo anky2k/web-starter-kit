@@ -15,7 +15,8 @@ const Img = React.memo(({
         loader={loader}
         className={`
           position-relative overflow-hidden
-          animate-appear bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
+          hover:scale-110 transition duration-500
+          bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
         `}
         src={src || `https://picsum.photos/seed/${new Date().getTime()}/150`} 
         alt={alt}

@@ -3,7 +3,7 @@ import Img from '../image'
 import { IconImg } from '../image'
 import useDrawer from '../../../hooks/use-drawer';
 import PhoneLoginFlow from '../../phone-number-login'
-
+import { checkAuth } from '../../../sources/registration'
 
 function CarouselCard({ data }) {
     const { src, name, desc, playstoreLink, id }  = data;
@@ -12,7 +12,17 @@ function CarouselCard({ data }) {
     const { show, close } = useDrawer();
     return (
         <div>
-            <div role="button" onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} 
+            <div role="button" 
+                onClick={async () => {
+                    const userType = await checkAuth();    
+                    if(userType === 'new') {
+                        show('Login', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))
+                    }
+                    if(userType === 'existing') {
+                        window.open(playstoreLink);
+                    }                    
+                }
+                } 
                 className="card row-span-3 shadow-lg compact bg-base-100">             
                 <div className="w-32 h-40 md:w-72 md:h-60 lg:w-72 lg:h-60">
                     <Img                    
@@ -23,7 +33,17 @@ function CarouselCard({ data }) {
             </div> 
             <div 
                 className="card-body p-0 ml-1 md:mt-1 lg:mt-1" 
-                onClick={() => show('', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))} role="presentation">
+                onClick={async () => {
+                    const userType = await checkAuth();    
+                    if(userType === 'new') {
+                        show('Login', () => (<PhoneLoginFlow playstoreLink={playstoreLink} onClose={close}/>))
+                    }
+                    if(userType === 'existing') {
+                        window.open(playstoreLink);
+                    }                    
+                }
+                } 
+                role="presentation">
                 <div className="flex justify-start">
                     <div
                         className="w-8 h-8 mt-4 md:mt-2 lg:mt-2"

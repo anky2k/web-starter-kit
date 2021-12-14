@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Link from 'next/link';
-import Confirm from '../confirm';
+import PhoneLoginFlow from '../../phone-number-login'
 import BottomNav from './bottom-nav';
 import useDrawer from '../../../hooks/use-drawer';
+import { isSubscribed } from '../../../utils/app';
 
 function Nav() {
   const { show, close } = useDrawer();
@@ -56,9 +57,11 @@ function Nav() {
                     <ul tabIndex="0" className="p-2 shadow menu dropdown-content bg-bg-primary rounded-box w-52 text-sm font-medium capitalize">
                       <li
                         className="text-white hover:text-pink-900 active-pink-400p-0"
-                        onClick={() => show('', () => (<Confirm title={'Are you sure?'} onCancel={close} onConfirm={close}/>))}
+                        onClick={
+                          () => show('', () => (<PhoneLoginFlow onClose={close}/>))
+                        }
                       >
-                        <a>Unsubscribe</a>
+                        <a>{`${isSubscribed() ? 'UnSubscribe' : 'Subscribe'}`}</a>
                       </li>                         
                     </ul>
                   </div>                    

@@ -9,6 +9,7 @@ const Drawer = ({
     className={`${visible ? 'h-1/3' : 'h-0'} 
       baseContainer z-100 fixed bottom-16 w-full overflow-hidden rounded-t-2xl bg-white
       transition-all duration-300
+      mb-2
       motion-reduce:transition-none motion-reduce:transform-none
     `}
   >

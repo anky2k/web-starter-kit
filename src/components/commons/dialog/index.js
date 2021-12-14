@@ -21,7 +21,7 @@ const Dialog = ({
         onClick={() => (close())}
         className="w-6 h-6 absolute right-3 top-3"
       >
-        <Close />
+        <Close class="cursor-pointer" />
       </div>
 
     </div>

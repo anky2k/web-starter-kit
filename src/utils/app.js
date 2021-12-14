@@ -1,6 +1,6 @@
 import canUseDom from 'can-use-dom';
 import cloneDeep from 'lodash/cloneDeep';
-import { setItem } from './cookie';
+import { setItem, getItem } from './cookie';
 import { GUEST_TOKEN, NO_SUPPORT } from '../constants';
 
 export const getNewObjectCopy = ogObj => (cloneDeep(ogObj));
@@ -50,6 +50,8 @@ export const share = () => {
   }
   return Promise.reject(NO_SUPPORT);
 };
+
+export const isSubscribed = () => getItem('x-access-token')
 
 /** example
  * Router.pushState('/user, {name : ankit, age: 31})

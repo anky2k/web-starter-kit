@@ -1,6 +1,7 @@
 
 import { getDateDiffSeconds } from '../utils/date';
 import { loadMockServer } from '../mock';
+import { result } from 'lodash';
 
 const RETRY_COUNT = 3;
 const RETRY_DELAY = 500;
@@ -29,6 +30,22 @@ export const backoff = async (fn, reqObj, depth = 0) => {
   }
 };
 
+export const reAuthenticate = async (fn, reqObj, authFn) => {  
+  try {
+    result = await fn(reqObj);
+    if (result.ok) {
+      return result;
+    }
+    if(result.authFailed) {
+      await authFn()
+      result = await fn(reqObj);
+    }    
+    return result
+  } catch (e) {
+    return e
+  }
+};
+
 export const resolvePromise = (data = {}) => (new Promise(resolve => {
   resolve(data);
 }));
@@ -52,7 +69,7 @@ export function apiMiddleWare(
   transformError = data => (data),
   settings = {}
 ) {
-  const { shouldCache = false, backoff = false, ttl = 0 } = settings;
+  const { shouldCache = false, backoff = false, ttl = 0, checkAuth = false, authFn } = settings;
   const cache = {};
   let cacheKey = '';
   const wrapped = async (params = {}) => {
@@ -69,6 +86,13 @@ export function apiMiddleWare(
       } else {
         resp = await _promise(params);
       }
+
+      if (checkAuth) {
+        resp = await reAuthenticate(_promise, params, authFn);
+      } else {
+        resp = await _promise(params);
+      }
+
       if (isObjectEmpty(resp)) {
         resp = null;
       }

@@ -39,7 +39,7 @@ class VSAPortal extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body className="overflow-x-hidden appBgColor">
+        <body className="overflow-x-hidden bg-bg-primary h-screen">
           <Main />
           <NextScript />
         </body>
