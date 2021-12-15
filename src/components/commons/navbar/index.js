@@ -13,7 +13,7 @@ function Nav() {
     <div className="sticky top-0 z-50">
       <nav className="bg-bg-primary">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">            
+          <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <Link href="/">
                 <div className="flex-shrink-0 cursor-pointer">
@@ -21,61 +21,61 @@ function Nav() {
                     className="h-8 w-8"
                     src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
                     alt="Workflow"
-                  />                
-                </div>              
-              </Link>         
+                  />
+                </div>
+              </Link>
               <div className={`
                   cursor-pointer
                   hidden md:block lg:block pl-2
                   text-xl font-bold text-white
                 `}>
-                  PlayZone
-              </div>                   
+                Gameium
+              </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/">
-                    <a                    
-                        className=" text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
+                    <a
+                      className=" text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
                     >
                       Home
                     </a>
-                 </Link>
-                 <Link href="/categories">
-                  <a                    
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
-                  >
+                  </Link>
+                  <Link href="/categories">
+                    <a
+                      className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   px-3 py-2 text-sm font-medium"
+                    >
                       Categories
-                  </a>
-                  </Link>                    
+                    </a>
+                  </Link>
                   <div className="dropdown dropdown-hover bg-transparent rounded-none">
                     <Link href="/account">
                       <div tabIndex="0" className="btn btn-ghost rounded-none
                       text-white  hover:text-pink-900 active-pink-400
                         focus:text-pink-900 px-3 py-2 
-                      text-sm font-medium capitalize">Account</div> 
-                    </Link>                 
+                      text-sm font-medium capitalize">Account</div>
+                    </Link>
                     <ul tabIndex="0" className="p-2 shadow menu dropdown-content bg-bg-primary rounded-box w-52 text-sm font-medium capitalize">
                       <li
                         className="text-white hover:text-pink-900 active-pink-400p-0"
                         onClick={
-                          () => show('', () => (<PhoneLoginFlow onClose={close}/>))
+                          () => show('', () => (<PhoneLoginFlow onClose={close} />))
                         }
                       >
                         <a>{`${isSubscribed() ? 'UnSubscribe' : 'Subscribe'}`}</a>
-                      </li>                         
+                      </li>
                     </ul>
-                  </div>                    
-                </div> 
+                  </div>
+                </div>
               </div>
-            </div>            
-              <div 
-                className={`
+            </div>
+            <div
+              className={`
                   block md:hidden lg:hidden
                   text-xl font-bold text-white
                   cursor-pointer
                 `}
-                >PlayZone
-              </div>     
+            >Gameium
+            </div>
             <div className="-mr-2 flex">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -134,36 +134,36 @@ function Nav() {
           leaveTo="opacity-0 scale-95"
         >
           <div id="mobile-menu">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <Link href="/about">
-                    <a                  
-                    className=" text-white block px-3 py-2 text-base font-medium"
-                    >
-                    About
-                    </a>
-                </Link>  
-                <Link href="/blog">
-                    <a                  
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
-                    >
-                    Blog
-                    </a>
-                </Link>  
-                <Link href="/portfolio">
-                    <a                  
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
-                    >
-                    Portfolio
-                    </a>
-                </Link>  
-                <Link href="/contact">
-                    <a                  
-                    className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
-                    >
-                    Contact
-                    </a>
-               </Link>                  
-               {/* <Link href="/account">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link href="/about">
+                <a
+                  className=" text-white block px-3 py-2 text-base font-medium"
+                >
+                  About
+                </a>
+              </Link>
+              <Link href="/blog">
+                <a
+                  className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
+                >
+                  Blog
+                </a>
+              </Link>
+              <Link href="/portfolio">
+                <a
+                  className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
+                >
+                  Portfolio
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a
+                  className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
+                >
+                  Contact
+                </a>
+              </Link>
+              {/* <Link href="/account">
                     <a                  
                     className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
                     >
@@ -178,11 +178,11 @@ function Nav() {
                 Unsubscribe
                 </a>                    
                <div className="divider" /> */}
-              </div>                  
             </div>
-        </Transition>                
+          </div>
+        </Transition>
         <BottomNav />
-      </nav>     
+      </nav>
     </div>
   );
 }
