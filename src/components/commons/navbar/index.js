@@ -137,27 +137,15 @@ function Nav() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link href="/about">
                 <a
+                  onClick={() => setIsOpen(!isOpen)}
                   className=" text-white block px-3 py-2 text-base font-medium"
                 >
                   About
                 </a>
               </Link>
-              <Link href="/blog">
-                <a
-                  className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
-                >
-                  Blog
-                </a>
-              </Link>
-              <Link href="/portfolio">
-                <a
-                  className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
-                >
-                  Portfolio
-                </a>
-              </Link>
               <Link href="/contact">
                 <a
+                  onClick={() => setIsOpen(!isOpen)}
                   className="text-white  hover:text-pink-900 active-pink-400 focus:text-pink-900   block px-3 py-2 text-base font-medium"
                 >
                   Contact

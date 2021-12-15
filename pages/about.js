@@ -10,7 +10,7 @@ const About = props => {
           title: 'about us'
         }}
       />
-      <div className="flex flex-col gap-y-6 ml-8 mt-8">
+      <div className="flex flex-col gap-y-6 ml-4 mt-8">
         <h1 className="text-white text-2xl underline">About Us</h1>
         <p className="text-white">
           <span className="text-pink-600 font-bold first-letter:text-4xl">Gameium Zone</span> is a digital gaming platform. Our vision is to provide an uninterrupted advertisement free gaming experience to our users.

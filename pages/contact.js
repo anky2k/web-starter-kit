@@ -10,7 +10,7 @@ const About = props => {
           title: 'contact us'
         }}
       />
-      <div className="flex flex-col gap-y-6 ml-8 mt-8">
+      <div className="flex flex-col gap-y-6 ml-4 mt-8">
         <h1 className="text-white text-2xl underline">Contact</h1>
         <p className="text-white cursor-pointer">
           <a href="mailto:manpreet@advysors.com">manpreet@advysors.com</a>

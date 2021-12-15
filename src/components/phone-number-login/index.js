@@ -9,7 +9,7 @@ const EnterNumber = forwardRef((props, ref) => {
     const [loading, setLoading] = useState(false)
     const { onClose, onSubmit } = props
     return (
-        <div className="form-control w-full items-center mt-8">
+        <div className="form-control w-full items-center mt-2">
             <input type="tel" ref={ref} placeholder="Enter your mobile number" className={`input input-bordered w-3/4 ${error ? 'border-red-600' : 'border-gray-300'}`} />
             <label className="text-red-600 text-sm">{error}</label>
             <div className="mt-6 grid grid-cols-2 w-3/4">
@@ -48,9 +48,9 @@ const EnterOtp = forwardRef((props, ref) => {
     const [loading, setLoading] = useState(false)
     const { onSubmit, onClose, playstoreLink, phoneNumber } = props
     return (
-        <div className="form-control w-full items-center mt-8">
+        <div className="form-control w-full items-center mt-2">
             <div className="flex gap-x-2">
-                <div className="flex flex-col gap-y-2">
+                <div className="flex flex-col">
                     <input type="tel" ref={ref} placeholder="Enter OTP" className={`input input-bordered ${error ? 'border-red-600' : 'border-gray-300'}`} />
                     {
                         error ? (<label className="text-red-600 text-sm">{error}</label>)
