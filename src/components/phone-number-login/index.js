@@ -38,7 +38,7 @@ const EnterNumber = forwardRef((props, ref) => {
 
 EnterNumber.displayName = 'EnterNumber'
 
-const renderer = ({ minutes, seconds }) => <span className="text-pink-700 text-base m-auto">retry in {minutes} : {seconds}</span>;
+const renderer = ({ minutes, seconds }) => <span className="text-pink-700 text-xs mt-2 m-auto">retry in {minutes} : {seconds}</span>;
 
 const EnterOtp = forwardRef((props, ref) => {
     const router = useRouter()
