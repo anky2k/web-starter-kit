@@ -30,16 +30,16 @@ export const backoff = async (fn, reqObj, depth = 0) => {
   }
 };
 
-export const reAuthenticate = async (fn, reqObj, authFn) => {  
+export const reAuthenticate = async (fn, reqObj, authFn) => {
   try {
     result = await fn(reqObj);
     if (result.ok) {
       return result;
     }
-    if(result.authFailed) {
+    if (result.authFailed) {
       await authFn()
       result = await fn(reqObj);
-    }    
+    }
     return result
   } catch (e) {
     return e
@@ -81,11 +81,12 @@ export function apiMiddleWare(
       if (cachedItem && isValid(cachedItem)) {
         return resolvePromise(cachedItem);
       }
-      if (backoff) {
-        resp = await backoff(_promise, params);
-      } else {
-        resp = await _promise(params);
-      }
+
+      // if (backoff) {
+      //   resp = await backoff(_promise, params);
+      // } else {
+      //   resp = await _promise(params);
+      // }
 
       if (checkAuth) {
         resp = await reAuthenticate(_promise, params, authFn);

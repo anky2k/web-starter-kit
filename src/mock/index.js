@@ -1,10 +1,12 @@
 import { Server } from 'miragejs';
 import { mockDataBase } from './seeds';
-import { getListRequestHandler, deleteListRequestHandler } from './req-handlers/github';
+import {
+  postSendOtp, postVerifyOtp, postLogin, postVerifyToken, postRefreshToken, postCheckAuth
+} from './req-handlers/registration';
+
 import { isMockMode } from '../config';
 
 function mockServer(environment = 'development', callback) {
-  console.log('running in mock mode');
   const server = new Server({
     environment,
     seeds(server) {
@@ -12,9 +14,15 @@ function mockServer(environment = 'development', callback) {
       callback();
     },
     routes() {
-      // git
-      this.get('https://api.github.com/search/repositories', getListRequestHandler);
-      this.delete('https://api.github.com/delete/repositories', deleteListRequestHandler);     
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/send-otp', postSendOtp)
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/verify-otp', postVerifyOtp)
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/login', postLogin)
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/verify-token', postVerifyToken)
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/refresh-token', postRefreshToken)
+      this.post('https://jn0yuqca5m.execute-api.ap-southeast-1.amazonaws.com/check-auth', postCheckAuth)
+
+      // bypass from mock
+      this.passthrough('/success');
     }
   });
   return server;

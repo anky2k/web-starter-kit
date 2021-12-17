@@ -1,6 +1,10 @@
-import { repoList, deleteRepo } from './github-repo';
+import { login, sendOtp, verifyOtp, checkAuth, verifyToken, refreshToken } from './registration';
 
 export const mockDataBase = {
-  repoList,
-  deleteRepo
+  checkAuth,
+  verifyToken,
+  refreshToken,
+  sendOtp,
+  verifyOtp,
+  login
 };

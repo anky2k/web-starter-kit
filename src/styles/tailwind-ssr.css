@@ -2578,8 +2578,8 @@ html {
 	margin-left: 0.75rem;
 	margin-right: 0.75rem;
 }
-.ml-8 {
-	margin-left: 2rem;
+.ml-4 {
+	margin-left: 1rem;
 }
 .mt-8 {
 	margin-top: 2rem;
@@ -2625,9 +2625,6 @@ html {
 }
 .-mr-2 {
 	margin-right: -0.5rem;
-}
-.ml-4 {
-	margin-left: 1rem;
 }
 .mr-2 {
 	margin-right: 0.5rem;

@@ -23,11 +23,11 @@ console.log(`running in ${dev ? 'dev' : 'production'} mode pointing to ${APP_ENV
 const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: createSecureHeaders() }];
-  },  
+  },
   eslint: {
     dirs: ['pages', 'src'], // Only run ESLint on the 'pages' and 'src' directories during production builds (next build)
   },
-  images: {    
+  images: {
     domains: ['d1lf3l2ndx18vw.cloudfront.net', 'picsum.photos'],
     loader: 'custom'
   },
@@ -35,7 +35,7 @@ const nextConfig = {
   trailingSlash: false, // https://github.com/zeit/next.js/issues/8119
   experimental: { // this takes the module/nomodule approach -  https://nextjs.org/blog/next-9-1#module--nomodule
     modern: true
-  },  
+  },
   pwa: {
     swSrc: './src/service-worker.js',
     dest: 'public'
@@ -46,7 +46,7 @@ const nextConfig = {
     basePath: BASE_PATH,
     mockMode: MOCK_MODE,
     appEnv: APP_ENV
-  },  
+  },
   generateBuildId: async () => appVersion,
   webpack: config => {
     config.output.publicPath = '';
@@ -54,12 +54,12 @@ const nextConfig = {
     !dev && config.module.rules.push({
       test: /\.js$/,
       loader: 'string-replace-loader',
-      options: {
-        search: `import { loadMockServer } from '../mock';`,
-        replace: `const loadMockServer = async () => Promise.resolve(true);`,
-      }
+      // options: {
+      //   search: `import { loadMockServer } from '../mock';`,
+      //   replace: `const loadMockServer = async () => Promise.resolve(true);`,
+      // }
     })
-    if(!dev){
+    if (!dev) {
       config.plugins.push(new BundleAnalyzerPlugin({
         openAnalyzer: false,
         generateStatsFile: true,
@@ -81,7 +81,7 @@ const nextConfig = {
           assetsSort: 'size'
         }
       }));
-    }    
+    }
     return config;
   }
 };

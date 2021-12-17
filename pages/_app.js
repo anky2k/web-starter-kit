@@ -168,10 +168,10 @@ VSAPortal.getInitialProps = async ctx => {
   const { router } = ctx;
   const { locale = 'en-in' } = router;
   try {
-    const locales = await getLocales(locale);
+    // const locales = await getLocales(locale);
     return {
       locale,
-      locales
+      locales: {}
     };
   } catch (e) {
     console.log(e);

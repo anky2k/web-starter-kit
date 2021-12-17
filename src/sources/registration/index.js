@@ -3,8 +3,15 @@ import { getApiBasePath } from '../../config';
 import { apiMiddleWare } from '../../network/utils';
 import { getItem } from '../../utils/cookie'
 
+function transformSuccess(data) {
+  return data;
+}
 
-export async function sendOtp({ id }) {
+function transformError(data) {
+  return data;
+}
+
+const [sendOtp] = apiMiddleWare(async function sendOtp({ id }) {
   let response = {};
   try {
     const apiPath = `${getApiBasePath('service')}/send-otp`;
@@ -15,9 +22,11 @@ export async function sendOtp({ id }) {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
 
-export async function verifyOtp({ number, otp }) {
+export { sendOtp }
+
+const [verifyOtp] = apiMiddleWare(async function verifyOtp({ number, otp }) {
   let response = {};
   try {
     const apiPath = `${getApiBasePath('service')}/verify-otp`;
@@ -29,9 +38,11 @@ export async function verifyOtp({ number, otp }) {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
 
-export async function login({ id }) {
+export { verifyOtp }
+
+const [login] = apiMiddleWare(async function login({ id }) {
   let response = {};
   try {
     const apiPath = `${getApiBasePath('service')}/login`;
@@ -42,9 +53,11 @@ export async function login({ id }) {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
 
-export async function verifyToken() {
+export { login }
+
+const [verifyToken] = apiMiddleWare(async function verifyToken() {
   let response = {};
   try {
     const apiPath = `${getApiBasePath('service')}/verify-token`;
@@ -58,9 +71,11 @@ export async function verifyToken() {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
 
-export async function refreshToken() {
+export { verifyToken }
+
+const [refreshToken] = apiMiddleWare(async function refreshToken() {
   let response = {};
   try {
     const apiPath = `${getApiBasePath('service')}/refresh-token`;
@@ -69,9 +84,9 @@ export async function refreshToken() {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
 
-export async function checkAuth(req) {
+const [checkAuth] = apiMiddleWare(async function checkAuth(req) {
   try {
     if (getItem('x-access-token')) {
       const resp = await srVerifyToken();
@@ -85,5 +100,7 @@ export async function checkAuth(req) {
   } catch (err) {
     return Promise.reject(err);
   }
-}
+}, transformSuccess, transformError);
+
+export { checkAuth }
 

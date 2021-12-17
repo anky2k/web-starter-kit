@@ -61,8 +61,8 @@ const getLanguage = () => (getFirstTruthyValue(getLanguageFromPath, getLanguageP
 
 const refreshTranslations = async (locale, locales, setTranslations) => {
   try {
-    const clLocales = await getLocales(locale);
-    setTranslations({ ...locales, ...clLocales });
+    // const clLocales = await getLocales(locale);
+    setTranslations({ ...locales, ...{} });
   } catch (e) {
     console.log(e);
   }
