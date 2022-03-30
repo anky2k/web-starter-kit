@@ -89,12 +89,6 @@ docker build . -f=Dockerfile -t=webapp-1.0
 ```
 docker run -it --rm webapp-1.0 /bin/ash
 ```
-
-## Example
-
-The example in this repo lists few github repos and there details in 2 different routes. We are following the nextjs routing way of defining files / folders in pages folder. This example shows a static route and a dynamic route.
-The example setup enables us to pre render stuff and create a static bundle with npm run export (a route like repos) where the page structure is already known and probably even data is available before time.
-
 ## state management
 
 Not every app is reactive in nature, a lot f times the idea is to pull data and render. Data can be categorised in two parts
