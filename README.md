@@ -90,6 +90,7 @@ docker build . -f=Dockerfile -t=webapp-1.0
 docker run -it --rm webapp-1.0 /bin/ash
 ```
 
+
 ## state management
 
 Not every app is reactive in nature, a lot f times the idea is to pull data and render. Data can be categorised in two parts
@@ -155,6 +156,10 @@ export default GitHubRepoList;
 
 In the above example all we do is declare an async function and consume it, since it can be memoized basis request params we could import the same function as many times as we want in any component without making duplicate calls. Which means data is now persisted across the app without redux also the code is readable and declarative in nature. All one has do is import a fucntion and call it.
 
+## component state handler
+
+This repo follows a standard that every component should have its own state management of pending, success and error states, this is to solve layout shift issues. The layout of a page should never get effected because of the data or any other side effects it should either be in pending (loading) , success or error state. This can achieved with HOC which can abstract out all of these state management bussiness logic and render components accordingly. [ComponentStateHandler](https://github.com/anky2k/web-starter-kit/blob/main/src/components/commons/component-state-handler.js) is an HOC which works in sync with a useFetcher. userFethcer take care making async calls and hence change state value accordingly, while ComponentStateHandler HOC takes care of rendering basis state values.
+
 ## for lhci to run locally please do the following
 
   ```
@@ -165,7 +170,7 @@ In the above example all we do is declare an async function and consume it, sinc
 
 redux is not used for state management, hence to share data between pages we use route states - but unfortunately nextjs does not support route state i guess this is because they have an isomorphic router they allow data sharing only via query params, now to support route state we have extended the next router to have a method pushState which saves the data to be shared in session storage. And leveraging the getIntialProps lifecycle hook we read the data from storage and pass it on to the respective page (via withRouteState) but this doesn't seem to work by adding a basePath (i think this is because the basepath is not physically present in the pages directory), hence added a hook for to solve for that
 
-## Support for localisation
+## support for localisation
 
 - URLs should be parameterized with a language code (i.e. locale subpaths).
 - The app needs to be able to read the locale from the URL (during SSR and client-side navigation).
@@ -176,7 +181,7 @@ redux is not used for state management, hence to share data between pages we use
 - The contents of the website/app should be translated/localized based on the current language setting.
 - The app’s metadata should respect the selected language setting (for SEO purposes).
 
-## Approach
+## approach
 
 multi lingual support is very different when its via CSR / SSR / SSG and we might need to solve for all cases but our priority is SSG since we believe most of the webapp cases in should be addressed with SSG.
 
