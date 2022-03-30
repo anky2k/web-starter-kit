@@ -89,6 +89,7 @@ docker build . -f=Dockerfile -t=webapp-1.0
 ```
 docker run -it --rm webapp-1.0 /bin/ash
 ```
+
 ## state management
 
 Not every app is reactive in nature, a lot f times the idea is to pull data and render. Data can be categorised in two parts
