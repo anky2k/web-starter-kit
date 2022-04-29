@@ -1,19 +1,19 @@
 import Document, {
-  Html, Main, NextScript, Head as NextHead
+  Html, Main, NextScript, Head
 } from 'next/document';
 
 import bundleCss from '!raw-loader!../src/styles/tailwind-ssr.css';
 
-class Head extends NextHead {
-  getCssLinks(files) {
-    if (process.env.NODE_ENV !== 'production') {
-      return super.getCssLinks(files);
-    }
+// class Head extends NextHead {
+//   getCssLinks(files) {
+//     if (process.env.NODE_ENV !== 'production') {
+//       return super.getCssLinks(files);
+//     }
 
-    // do not return any css files in production
-    return [];
-  }
-}
+//     // do not return any css files in production
+//     return [];
+//   }
+// }
 class WebStarterKit extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);        
